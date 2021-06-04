@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- BEGIN favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-config"
+      content="images/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- END favicon -->
+
+    <!-- BEGIN Info -->
+    <meta name="description" content="Ekko" />
+    <meta name="title" property="og:title" content="Ekko" />
+    <meta property="og:type" content="Website" />
+    <meta
+      name="image"
+      property="og:image"
+      content="https://ekko-realtime.com/images/thumb.png"
+    />
+    <meta name="description" property="og:description" content="Ekko" />
+    <meta name="author" content="Ekko" />
+    <!-- END Info -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekko</title>
+    
+    <link rel="preconnect" href="https://e1zswm27.cdn.imgeng.in">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/reset.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/responsive.css" />
+  </head>
+  <body>
+    <header class="mobile-menu-closed">
+      <div id="header">
+        <a href="/">
+          <img src="https://e1zswm27.cdn.imgeng.in/images/logo/logo-name.svg" />
+        </a>
+        <nav>
+          <a href="#start-here" class="selected">Start Here</a>
+          <a href="#case-study">Case Study</a>
+          <a href="#presentation">Presentation</a>
+          <a href="#our-team">Our Team</a>
+          <a
+            href="https://github.com/ekko-realtime"
+            target="_blank"
+            class="icon"
+            ><i class="fab fa-github"></i
+          ></a>
+        </nav>
+        <div id="menu">
+          <button type="button">
+            <svg
+              id="mobile-open"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="mobile-close"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="header-buffer"></div>
+
+      <div id="mobile-menu">
+        <a href="#start-here" class="selected">Start Here</a>
+        <a href="#case-study">Case Study</a>
+        <a href="#presentation">Presentation</a>
+        <a href="#our-team">Our Team</a>
+        <a href="https://github.com/ekko-realtime" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+      </div>
+    </header>
+
+    <div id="start-here" class="main-section">
+      <!-- <div class="h-full">
+        <div class="static-logo-color"></div>
+        <div class="bg-blue">
+          <img
+            class="ekko sm-screen"
+            src="https://e1zswm27.cdn.imgeng.in/images/logo/logo-name-vertical.png"
+          />
+          <img class="ekko lg-screen" src="https://e1zswm27.cdn.imgeng.in/images/logo/ekko-name-white.png" />
+
+          <p class="light-text">
+            An open-source framework that<br />provides
+            <span class="text-pink">realtime infrastructure</span> and<br />
+            <span class="text-teal">in-transit message processing</span><br />
+            for web applications.
+          </p>
+        </div>
+      </div> -->
+      <!-- <div class="h-full">
+        <div class="bg-teal static-logo-teal-light">
+          <h2>Easy to Manage & Deploy</h2>
+        </div>
+        <div class="bg-teal">
+          <h2 class="sm-header">Easy to Manage & Deploy</h2>
+          <p>
+            Ekko abstracts away the complexity of working with cloud
+            infrastructure by automating the deployment process.
+          </p>
+          <img
+            style="margin-bottom: -3rem"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/cli-deploys.png"
+          />
+        </div> -->
+      <!-- </div> -->
+      <!-- <div class="h-full">
+        <div class="bg-pink static-logo-pink-light">
+          <h2>Modular and Flexible</h2>
+        </div>
+        <div class="bg-pink">
+          <h2 class="sm-header">Modular and Flexible</h2>
+          <p>
+            Ekko Functions are serverless functions that can be customized for
+            your realtime needs and reused across applications.
+          </p>
+          <img class="pad" src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-3.gif" />
+        </div>
+      </div> -->
+    </div>
+
+    <aside id="toc">
+      <ul>
+        <li data-section="introduction">
+          <a href="#introduction">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>0.0 Introduction</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="traditional-web-application-architecture">
+          <a href="#traditional-web-application-architecture">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>1.0 Traditional Web Application Architecture</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="traditional-web-application-architecture" class="subitem">
+          <a href="#subsection-needs-a-title">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>1.1 Subsection needs a title</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="traditional-web-application-architecture" class="subitem">
+          <a href="#three-tier-architecture">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>1.2 Three-tier Architecture</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="traditional-web-application-architecture" class="subitem">
+          <a href="#beyond-the-three-tier-architecture">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>1.3 Beyond the Three-tier Architecture</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="the-jamstack">
+          <a href="#the-jamstack">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>2.0 The JAMstack</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="the-jamstack" class="subitem">
+          <a href="#what-is-the-jamstack">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>2.1 What is the JAMstack?</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="the-jamstack" class="subitem">
+          <a href="#contrasting-jamstack-with-three-tier">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>2.2 Contrasting JAMstack with Three-tier</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="serverless">
+          <a href="#serverless">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>3.0 Serverless</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="serverless" class="subitem">
+          <a href="#serverless-functions">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>3.1 Serverless Functions</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="jamstack-plus_serverless">
+          <a href="#jamstack-plus-serverless">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>4.0 JAMstack + Serverless</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="jamstack-plus_serverless" class="subitem">
+          <a href="#building_jamstack_plus_serverless-from-scratch">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>4.1 Building JAMstack + Serverless from Scratch</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="jamstack-plus_serverless-solutions" class="subitem">
+          <a href="#jamstack-plus-serverless-solutions">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>4.2 JAMstack + Serverless Solutions</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="introducing-jolt">
+          <a href="#introducing-jolt">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>5.0 Introducing Jolt</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="introducing-jolt" class="subitem">
+          <a href="#the-core-of-jolt">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>5.1 The Core of Jolt</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="how-jolt-deploys-applications">
+          <a href="#how-jolt-deploys-applications">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>6.0 How Jolt Deploys Applications</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="jolt-plus">
+          <a href="#jolt-plus">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>7.0 Jolt+/p>
+            </div>
+          </a>
+        </li>
+        <li data-section="future-work">
+          <a href="#future-work">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>8.0 Future Work</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="bibliography">
+          <a href="#bibliography">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>9.0 Bibliography</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <div id="case-study" class="main-section">
+      <div id="case-study-content">
+        <div class="prose">
+          <h1>Case Study</h1>
+          <div id="introduction">
+            <h2 id="introduction">0. Introduction</h2>
+            <p>Jolt is a lightweight, open-source framework that makes it easy to develop, deploy and maintain JAMstack applications with serverless functions. It abstracts away the complexity of provisioning and managing infrastructure, allowing the developer to focus on the business logic of their application. Jolt is targeted towards developers who are interested in the easier development and low latency that the JAMstack model provides, but who also need a secure, scalable environment to perform computation that can’t be done on the client.</p>
+            <p>Before we dive into what JAMstack architecture is and why you might want to combine it with serverless functions, let’s take a look at the architecture that is traditionally used for building web applications.</p>
+            <p>To get started with Jolt, run: <strong>npm install -g @jolt-framework</strong></p>
+            <p>A user needs to configure aws credentials for the CLI and then, navigate to the directory the user wishes to initialize a project.</p>
+            <p>To explore Jade, make sure you have a public GitHub repository available. Jolt has been tested for use with React and Gatsby - to get started.</p>
+            <p>When ready, run: <strong>jolt init</strong></p>
+            <p>This will check that the user has the right AWS settings, prompt the user for initial project information that will be stored locally.</p>
+            <p>Here is a list of Jolt commands available:</p>
+            <table>
+              <tr>
+                <th>Command</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>jolt init</td>
+                <td>Creates a local config file that will be used at deployment time to deploy a JAMstack + serverless app</td>
+              </tr>
+              <tr>
+                <td>jolt dev</td>
+                <td>Launches a local development server to simulate lambdas on the local machine</td>
+              </tr>
+              <tr>
+                <td>jolt projects</td>
+                <td>List all your existing JAMstack + serverless apps</td>
+              </tr>
+              <tr>
+                <td>jolt update</td>
+                <td>Creates a new version of an existing application and updates the associated AWS </td>
+              </tr>
+              <tr>
+                <td>jolt rollback</td>
+                <td>Allows user to go to a previous version of an application</td>
+              </tr>
+              <tr>
+                <td>jolt destroy</td>
+                <td>Remove an app and its associated AWS infrastructure</td>
+              </tr>
+            </table>
+            <p>For notes on these commands and others, please visit the documentation on our GitHub page.
+            The following chapters will go into detail about the JAMstack + Serverless architecture, Jolt and how we expanded on the functionality of Jolt.</p>
+            <p>The following chapters will go into detail about the JAMstack + Serverless architecture, Jolt and how we expanded on the functionality of Jolt.</p>
+          </div>
+
+          <h2 id="traditional-web-application-architecture">1.0 Traditional Web Application Architecture</h2>
+          <p>TEXT</p>
+          <p>TEXT</p>
+
+          <!-- <h2 id="how-is-realtime-implemented">How is Realtime Implemented</h2>
+          <p>
+            There is a lot of test text... and then there is an inline
+            <a href="">Test Link </a> that seems to look fine here
+          </p>
+          <blockquote>
+            Test Block Quote Test Block Quote Test Block Quote Test Block Quote
+            Test Block Quote Test Block Quote Test Block Quote Test Block Quote
+            Test Block Quote
+          </blockquote>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p> -->
+          <div id=subsection-needs-a-title>
+            <h3 id="subsection-needs-a-title">1.1 Subsection Needs a Title</h3>
+            <p>The basic premise of web communication has remained the same since the start of the web. Using a web browser (a client), a user sends a request to a server for some content. When the server receives this request, it sends back a response with the requested content.</p>
+
+            <p><strong>Image of client web server request response</strong></p>
+              
+            <p>At first, web content consisted primarily of static text, images and a few other media types. While this model is an efficient, effective way of distributing information, these purely static websites are pretty limited in what they allow users to do. In the client-server diagram above, the server (a web server) is only built to send static content to clients, but what if some kind of logical functionality was needed?</p>
+              
+            <p>For instance, imagine an e-commerce website that sells raincoats for dogs. When a user clicks a button to buy a new Pooch Poncho, a complex sequence of events needs to be handled.</p>
+            
+            <ol>
+              <li>Authenticate the user</li>
+              <li>Verify that their payment method is valid</li>
+              <li>Confirm the purchase with their bank</li>
+              <li>Create and save a record of the purchase</li>
+              <li>Send purchase confirmation to the user</li>
+            </ol>
+              
+            <p>image of a computer monitor with a shopping cart being clicked, a request being sent to a web server and then being proxied to an app server and some computation being done there</p>
+              
+            <p>To handle these kinds of dynamic requests, a 3 tier architecture can be used.</p>
+          </div> 
+
+          <h3 id="three-tier-architecture">1.2 Three-tier Architecture</h3>
+            <p>Accompanying the first tier (the web server), the second tier in this architecture is an application server. Application servers are built to process requests that require some computation and thus, can’t be handled by a web server which is optimized for delivering static content. This application server could handle all kinds of dynamic processes like payment processing, inventory management, or any other business logic the application needs.</p>
+
+            <p>With the application server providing dynamic content and the web server serving up static content, we need somewhere to actually store the data associated with this content. In our e-commerce example, we’ll probably want somewhere to store information about our inventory, our sales history and much more. This brings us to the final piece of our 3 tier architecture, the database.</p>
+            
+            <p>There are many different kinds of databases, but at a high level, they all have the responsibility of storing persistent data so that it can be retrieved by the application or web servers on demand and sent to clients.</p>
+            
+            <p>Completed 3 tier image</p>
+            
+            <p>With this completed 3 tier architecture, we now have a back end that can store data, perform computation and serve up static and dynamic content to users.</p>
+
+          <h3 id="beyond-the-three-tier-architecture">1.3 Beyond the Three-Tier Architecture</h3>
+            <p>As applications grow in scope and popularity, additional pieces of infrastructure are needed. Multiple application and web servers may become necessary to handle the increased traffic and a load balancer will be needed to distribute traffic evenly across those new servers. Additional  databases may be required as the quantity of data increases and operations performed on that data become more frequent. In order to provide lower latency and reduce some of the load on the servers, a caching layer could be added.</p>
+  
+            <p>Image of a more complex architecture featuring the infrastructure mentioned above</p>
+              
+            <p>Augmenting an application architecture in this way gives developers an enormous amount of power and control over the functioning of the application. However, with great power comes great complexity and as the complexity of the application grows, scaling and maintaining it requires more and more of an investment of resources and time.</p>
+              
+            <p>For use cases that can’t afford the costs associated with building and maintaining this type of complex architecture, there is another solution that provides an easy to build, maintain and scale platform for deploying web applications.</p>
+            
+
+          <h2 id="the-jamstack">
+            2. The JAMstack
+          </h2>
+
+          <h3 id="what-is-the-jamstack">2.1 What is the JAMstack?</h2>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+
+          <h2 id="future-work">Future Work</h2>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+          <p>TEXT</p>
+
+          <!-- <p>associationsjson.png</p>
+          <img src="https://e1zswm27.cdn.imgeng.in/images/diagrams/associationsjson.png" />
+          <p>bad-actor-1.gif</p>
+          <img src="https://e1zswm27.cdn.imgeng.in/images/diagrams/bad-actor-1.gif" />
+          <p>bad-actor-2.gif</p> -->
+      </div>
+    </div>
+
+    <div id="presentation" class="main-section">
+      <div class="bg-gray">
+        <h2>Presentation</h2>
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/P5G68KjzIoA" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="our-team" class="main-section">
+      <div>
+        <div>
+          <div>
+            <h2>Meet our team</h2>
+            <p class="text-xl text-gray-300">
+              We are currently looking for opportunities. If you liked what you
+              saw and want to talk more, please reach out!
+            </p>
+          </div>
+          <ul class="people">
+            <!-- <li class="profile">
+              <img
+                class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                src="https://e1zswm27.cdn.imgeng.in/images/team/as.jpg"
+                alt=""
+              />
+              <div>
+                <div>
+                  <h3>Alex Strick van Linschoten</h3>
+                  <p>London, UK</p>
+                </div>
+
+                <ul class="social">
+                  <li>
+                    <a href="mailto:alexstrick@fastmail.com" target="_blank"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/strickvl/"
+                      target="_blank"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/strickvl" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://www.alexstrick.com/" target="_blank"
+                      ><i class="fas fa-globe"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascripts/script.js"></script>
+  </body>
+</html>
