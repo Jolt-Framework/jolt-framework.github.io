@@ -1,18 +1,12 @@
-@font-face {
-  font-family: "Montserrat";
-  src: url("fonts/montserrat/Montserrat-Regular.ttf") format("tff");
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap');
 
-@font-face {
-  font-family: "Century Gothic";
-  src: url("fonts/centurygothic/GOTHICB.TTF") format("tff");
-}
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 
 :root {
-  --ekko-blue: #334252;
-  --ekko-teal: #00bdaa;
-  --ekko-teal-light: rgba(0, 189, 170, 0.2);
-  --ekko-pink: #ff895d;
+  --jolt-blue: #00B4FF;
+  --jolt-teal: #3D97D0;
+  --jolt-teal-light: rgba(0, 189, 170, 0.2);
+  --jolt-black: #071E3D;
 
   --white: #ffffff;
   --gray-50: rgb(249, 250, 251);
@@ -33,7 +27,7 @@
 html,
 body {
   box-sizing: border-box;
-  font-family: Montserrat, system-ui, -apple-system, "Segoe UI", Roboto,
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", "Roboto",
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   height: 100%;
 }
@@ -49,15 +43,15 @@ body {
 }
 
 .bg-blue {
-  background-color: var(--ekko-blue);
+  background-color: var(--jolt-blue);
 }
 
 .bg-teal {
-  background-color: var(--ekko-teal);
+  background-color: var(--jolt-teal);
 }
 
 .bg-pink {
-  background-color: var(--ekko-pink);
+  background-color: var(--jolt-pink);
 }
 
 .bg-gray {
@@ -65,11 +59,11 @@ body {
 }
 
 .text-pink {
-  color: var(--ekko-pink);
+  color: var(--jolt-pink);
 }
 
 .text-teal {
-  color: var(--ekko-teal);
+  color: var(--jolt-teal);
 }
 
 .block {
@@ -104,7 +98,7 @@ body {
 }
 
 #header img {
-  height: 2rem;
+  height: 4rem;
 }
 
 #header nav {
@@ -132,7 +126,7 @@ body {
   outline: 2px solid transparent;
   outline-offset: 2px;
 
-  box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--ekko-teal);
+  box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--jolt-teal);
 }
 
 #menu button svg {
@@ -179,9 +173,9 @@ body {
 }
 
 #mobile-menu > a.selected {
-  background-color: var(--ekko-teal-light);
-  border-left-color: var(--ekko-teal);
-  color: var(--gray-900);
+  background-color: var(--jolt-teal-light);
+  border-left-color: var(--jolt-teal);
+  color: var(--jolt-black);
 }
 
 .mobile-menu-open #mobile-menu {
@@ -210,6 +204,7 @@ body {
   transition: all 0.5s ease;
   visibility: hidden;
   width: var(--toc-width);
+  font: "Montserrat";
 }
 
 #toc li {
@@ -218,16 +213,16 @@ body {
 }
 
 #toc a {
-  color: var(--gray-500);
+  color: var(--jolt-black);
   text-decoration: none;
 }
 
 #toc a:hover {
-  color: var(--ekko-blue);
+  color: var(--jolt-blue);
 }
 
 #toc .selected a {
-  color: var(--ekko-teal);
+  color: var(--jolt-teal);
   text-decoration: none;
 }
 
@@ -264,15 +259,15 @@ body {
 }
 
 #toc .selected a:hover .bullet div {
-  background-color: var(--ekko-teal);
+  background-color: var(--jolt-teal);
 }
 
 #toc .selected .bullet {
-  background-color: var(--ekko-teal-light);
+  background-color: var(--jolt-teal-light);
 }
 
 #toc .selected .bullet div {
-  background-color: var(--ekko-teal);
+  background-color: var(--jolt-teal);
 }
 
 #toc .subitem {
@@ -296,6 +291,7 @@ body {
 
 #case-study-content > div {
   padding: 4rem 1rem;
+  font-family: 'Roboto';
 }
 
 #case-study-content h2::before,
@@ -307,12 +303,14 @@ body {
   height: 8rem;
   visibility: hidden;
   pointer-events: none;
+  font-family: 'Montserrat';
 }
 
 .prose h1,
 .prose h2,
 .prose h3 {
-  color: var(--ekko-blue);
+  color: var(--jolt-blue);
+  font-family: 'Montserrat';
 }
 
 .prose a {
@@ -356,6 +354,7 @@ body {
   color: var(--gray-300);
   font-size: 1.25rem;
   line-height: 1.75rem;
+  font-family: 'Roboto';
 }
 
 #our-team > div > div > div > * + * {
@@ -388,6 +387,7 @@ body {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.75rem;
+  font-family: 'Montserrat';
 }
 
 #our-team .profile > div > div > * + * {
@@ -399,7 +399,8 @@ body {
 }
 
 #our-team .profile > div > div > p {
-  color: var(--ekko-teal);
+  color: var(--jolt-teal);
+  font-family: 'Roboto';
 }
 
 #our-team .social {
@@ -451,7 +452,7 @@ body {
 }
 
 #presentation h2 {
-  color: var(--ekko-blue);
+  color: var(--jolt-blue);
   font-weight: 800;
   font-size: 2.25rem;
   margin-bottom: 1em;
@@ -468,7 +469,7 @@ body {
 }
 
 #start-here .static-logo-color {
-  background-image: url("../images/logo/ekko-logo.png");
+  background-image: url("../images/logo/jolt-logo.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 25%;
@@ -499,7 +500,7 @@ body {
   width: 100%;
 }
 
-#start-here > div div:last-child > img.ekko {
+#start-here > div div:last-child > img.jolt {
   max-width: 50%;
 }
 
