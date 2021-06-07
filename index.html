@@ -66,7 +66,7 @@
   <body>
     <header class="mobile-menu-closed">
       <div id="header">
-        <a href="/">
+        <a href="/jolt-framework">
           <img src="images/logo/color_logo.svg" />
         </a>
         <nav>
@@ -153,7 +153,7 @@
             </a>
           </li>
           <li data-section="traditional-web-application-architecture" class="subitem">
-            <a href="#subsection-needs-a-title">
+            <a href="#a-client-server-architecture">
               <div>
                 <div class="bullet"><div></div></div>
                 <p>1.1 Subsection needs a title</p>
@@ -306,10 +306,10 @@
               <p>This will check that the user has the right AWS settings, prompt the user for initial project information that will be stored locally.</p>
               <p>Here is a list of Jolt commands available:</p>
               <table>
-                <tr>
-                  <th>Command</th>
-                  <th>Description</th>
-                </tr>
+                <thead>
+                    <td>Command</td>
+                    <td style="text-align: center;">Description</td>
+                </thead>
                 <tr>
                   <td>jolt init</td>
                   <td>Creates a local config file that will be used at deployment time to deploy a JAMstack + serverless app</td>
@@ -340,59 +340,55 @@
               <p>The following chapters will go into detail about the JAMstack + Serverless architecture, Jolt and how we expanded on the functionality of Jolt.</p>
             </div>
 
-            <h2 id="traditional-web-application-architecture">1.0 Traditional Web Application Architecture</h2>
-            <p>TEXT</p>
-            <p>TEXT</p>
-
-            <div id=subsection-needs-a-title>
-              <h3 id="subsection-needs-a-title">1.1 Subsection Needs a Title</h3>
-              <p>The basic premise of web communication has remained the same since the start of the web. Using a web browser (a client), a user sends a request to a server for some content. When the server receives this request, it sends back a response with the requested content.</p>
-
-              <p><strong>Image of client web server request response</strong></p>
-
-              <p>At first, web content consisted primarily of static text, images and a few other media types. While this model is an efficient, effective way of distributing information, these purely static websites are pretty limited in what they allow users to do. In the client-server diagram above, the server (a web server) is only built to send static content to clients, but what if some kind of logical functionality was needed?</p>
-
-              <p>For instance, imagine an e-commerce website that sells raincoats for dogs. When a user clicks a button to buy a new Pooch Poncho, a complex sequence of events needs to be handled.</p>
-
-              <ol>
-                <li>Authenticate the user</li>
-                <li>Verify that their payment method is valid</li>
-                <li>Confirm the purchase with their bank</li>
-                <li>Create and save a record of the purchase</li>
-                <li>Send purchase confirmation to the user</li>
-              </ol>
-
-              <p>image of a computer monitor with a shopping cart being clicked, a request being sent to a web server and then being proxied to an app server and some computation being done there</p>
-
-              <p>To handle these kinds of dynamic requests, a 3 tier architecture can be used.</p>
+            <div id="traditional-web-application-architecture">
+              <h2>1.0 Traditional Web Application Architecture</h2>
+              <p>The term “web application architecture” refers to all of the software and hardware components that make up a web application as well as the interactions between those components. To provide some context for the JAMstack and serverless functions, we’ll start with a look at the way web application architectures have traditionally been built.</p>
             </div>
 
-            <h3 id="three-tier-architecture">1.2 Three-tier Architecture</h3>
-              <p>Accompanying the first tier (the web server), the second tier in this architecture is an application server. Application servers are built to process requests that require some computation and thus, can’t be handled by a web server which is optimized for delivering static content. This application server could handle all kinds of dynamic processes like payment processing, inventory management, or any other business logic the application needs.</p>
+            <div id="a-client-server-architecture">
+              <h3>1.1 A Client-Server Architecture</h3>
+              <p>The basic premise of web communication has remained the same since the start of the web. Using a web browser (a client), a user sends a request to a server for some content. When the server receives this request, it sends back a response with the requested content.</p>
 
-              <p>With the application server providing dynamic content and the web server serving up static content, we need somewhere to actually store the data associated with this content. In our e-commerce example, we’ll probably want somewhere to store information about our inventory, our sales history and much more. This brings us to the final piece of our 3 tier architecture, the database.</p>
+              <figure>
+                <img src="images/diagrams/client-server-architecture.png" alt="Client Server Architecture">
+                <figcaption>A web browser (the client) makes an http request to a web server which, in this case, returns static assets such as html and images for the browser to render.</figcaption>
+              </figure>
+
+              <p>There are a wide variety of different architectural patterns that applications can adopt, but one of the oldest and most widely used patterns is the three-tier architecture.</p>
+            </div>
+
+            <div id="three-tier-architecture">
+              <h3>1.2 Three-tier Architecture</h3>
+              <p>The three-tier architecture consists of three “layers” of infrastructure: the web server (seen above), the application server, and the database.</p>
+
+              <p>Application servers are built to process requests that require some computation and thus can’t be handled by a web server which is optimized for delivering static content. The application server can handle dynamic processes like payment processing, inventory management, or any other business logic the application needs.</p>
+
+              <p>With the application server providing dynamic content and the web server serving up static content, we need somewhere to actually store the data associated with this content. This brings us to the final piece of a 3 three-tier architecture, the database.</p>
 
               <p>There are many different kinds of databases, but at a high level, they all have the responsibility of storing persistent data so that it can be retrieved by the application or web servers on demand and sent to clients.</p>
 
-              <p>Completed 3 tier image</p>
+              <figure>
+                <img src="images/diagrams/traditional-architecture.png" alt="Traditional 3 Tier Architecture">
+                <figcaption>The traditional architecture</figcaption>
+              </figure>
+            </div>
 
-              <p>With this completed 3 tier architecture, we now have a back end that can store data, perform computation and serve up static and dynamic content to users.</p>
+            <div id="beyond-the-three-tier-architecture">
+              <h3>1.3 Expanding Beyond the Traditional Architecture</h3>
+              <p>As applications grow in scope and popularity, additional pieces of infrastructure may be needed such as:</p>
+              <ul>
+                <li>Additional web, application, or database servers</li>
+                <li>Load balancers to distribute traffic across the additional servers</li>
+                <li>Caching layers</li>
+              </ul>
 
-            <h3 id="beyond-the-three-tier-architecture">1.3 Beyond the Three-Tier Architecture</h3>
-              <p>As applications grow in scope and popularity, additional pieces of infrastructure are needed. Multiple application and web servers may become necessary to handle the increased traffic and a load balancer will be needed to distribute traffic evenly across those new servers. Additional  databases may be required as the quantity of data increases and operations performed on that data become more frequent. In order to provide lower latency and reduce some of the load on the servers, a caching layer could be added.</p>
-
-              <p>Image of a more complex architecture featuring the infrastructure mentioned above</p>
-
-              <p>Augmenting an application architecture in this way gives developers an enormous amount of power and control over the functioning of the application. However, with great power comes great complexity and as the complexity of the application grows, scaling and maintaining it requires more and more of an investment of resources and time.</p>
-
-              <p>For use cases that can’t afford the costs associated with building and maintaining this type of complex architecture, there is another solution that provides an easy to build, maintain and scale platform for deploying web applications.</p>
-
+            </div>
 
             <h2 id="the-jamstack">
               2. The JAMstack
             </h2>
 
-            <h3 id="what-is-the-jamstack">2.1 What is the JAMstack?</h2>
+            <h3 id="what-is-the-jamstack">2.1 What is the JAMstack?</h3>
             <p>TEXT</p>
             <p>TEXT</p>
             <p>TEXT</p>

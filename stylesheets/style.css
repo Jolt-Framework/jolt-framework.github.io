@@ -32,6 +32,10 @@ body {
   height: 100%;
 }
 
+#introduction strong {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 *,
 *:before,
 *:after {
@@ -304,6 +308,16 @@ body {
   visibility: hidden;
   pointer-events: none;
   font-family: 'Montserrat';
+}
+
+table, tbody tr td {
+  border: var(--jolt-black) solid 1px;
+  text-align: center;
+}
+
+table tr:nth-child(1n) {
+  font-weight: bold;
+  color: #000000;
 }
 
 .prose h1,
