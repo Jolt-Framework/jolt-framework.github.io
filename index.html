@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
 
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <!-- BEGIN favicon -->
     <link
       rel="apple-touch-icon"
@@ -389,16 +395,33 @@
             </h2>
 
             <h3 id="what-is-the-jamstack">2.1 What is the JAMstack?</h3>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
+            <!-- Swiper -->
+            <div class="swiper-container mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/diagrams/client-server-architecture.png"/></div>
+                <div class="swiper-slide"><img src="images/diagrams/traditional-architecture.png"/></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Swiper JS -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+            <!-- Initialize Swiper -->
+            <script>
+              var swiper = new Swiper(".mySwiper", {
+                pagination: {
+                  el: ".swiper-pagination",
+                  type: "progressbar",
+                },
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+              });
+            </script>
 
             <h2 id="future-work">Future Work</h2>
             <p>TEXT</p>
