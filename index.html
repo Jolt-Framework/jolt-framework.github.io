@@ -345,6 +345,14 @@
               </div>
             </a>
           </li>
+          <li data-section="improving-jolt" class="subitem">
+            <a href="#local-testing">
+              <div>
+                <div class="bullet"><div></div></div>
+                <p>7.6 Implementing a Local Development Environment for Testing</p>
+              </div>
+            </a>
+          </li>
           <li data-section="final-architecture">
             <a href="#final-architecture">
               <div>
@@ -1235,8 +1243,9 @@
               <p>By default, Zip It and Ship It ignores environment variables while packaging functions so Jolt utilizes a different solution to handle them.</p>
               <p>Since packaging environment variables for Jolt functions needs to be done before a new function version is published, Jolt looks for a <strong class="code-snippet">.env</strong> file in every subdirectory of the functions folder. A <strong class="code-snippet">.env</strong> file contains a new-line separated list of environment variables. Before Jolt creates a Lambda, it checks to see if there is a <strong class="code-snippet">.env</strong> file within the same directory as the function. If a <strong class="code-snippet">.env</strong> file is found, the environment variables are retrieved and securely sent directly to AWS when the new Lambda version is created.</p>
               <p>By customizing Zip It and Ship It to fit our needs, and implementing a way to add environment variables to specific Lambdas at runtime, Jolt automates the process of packaging functions with their required dependencies and environment variables when creating Lambdas.</p>
-
-              <h4>7.6 Implementing a Local Development Environment for Testing</h4>
+            </div>
+            <div id="local-testing">
+              <h2>7.6 Implementing a Local Development Environment for Testing</h2>
 
               <p>The final feature we added to Jolt is a local development environment that allows Lambda functions to be tested prior to deployment. When developing web applications that have a traditional back end, a variety of methods exist for running that back end locally during development. This is not the case with serverless functions.</p>
 

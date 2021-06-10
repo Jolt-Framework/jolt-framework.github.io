@@ -286,8 +286,7 @@ body {
 
 /* Case Study */
 #case-study-content {
-  /* border-bottom: 1px solid var(--gray-200);
-  border-top: 1px solid var(--gray-200); */
+  /* margin: auto; */
 }
 
 #case-study-content img {
