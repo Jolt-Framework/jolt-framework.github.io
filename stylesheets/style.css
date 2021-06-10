@@ -90,6 +90,7 @@ body {
 
 /* Header */
 #header {
+  z-index: 500;
   align-items: center;
   background-color: var(--white);
   border-bottom: 1px solid var(--gray-200);
