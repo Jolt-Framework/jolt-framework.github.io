@@ -919,7 +919,6 @@
                         <h4>Configuring CloudFront</h4>
                         <p>Finally a new distribution is created on CloudFront. To do this, Jolt gives CloudFront the URL of the origin where the built application files are stored on S3. When requests for the application come into CloudFront, the requested content is retrieved from S3 and cached so that subsequent requests can be served without needing to go back to the origin.</p>
                         <p>Once the CloudFront distribution has been created, CloudFront begins propagating the new distribution to CDN servers all over the globe. This process can take upwards of 10 minutes to finish, but once complete, the new JAMstack + serverless application is live.</p>
-                        <p>From the user’s perspective, the 50+ steps involved in manually provisioning and deploying the application are all automated and handled by the <strong class="code-snippet">jolt deploy</strong> command.</p>
                       </figcaption>
                     </figure>
                   </div>
@@ -944,6 +943,7 @@
 
                 });
               </script>
+              <p>From the user’s perspective, the 50+ steps involved in manually provisioning and deploying the application are all automated and handled by the <strong class="code-snippet">jolt deploy</strong> command.</p>
             </div>
 
             <div id="improving-jolt">
