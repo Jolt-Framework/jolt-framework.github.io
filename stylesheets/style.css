@@ -32,7 +32,7 @@ body {
   height: 100%;
 }
 
-#introduction strong {
+.code-snippet {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -314,9 +314,10 @@ body {
 table, tbody tr td {
   border: var(--jolt-black) solid 1px;
   text-align: center;
+
 }
 
-table tr:nth-child(1n) {
+table td:nth-child(2n-1) {
   font-weight: bold;
   color: #000000;
 }
@@ -328,8 +329,12 @@ table tr:nth-child(1n) {
   font-family: 'Montserrat';
 }
 
+.prose h4 {
+  color: var(--jolt-teal);
+}
+
 .prose a {
-  color: #4c74b9;
+  color: var(--jolt-teal);
   text-decoration: underline !important;
   text-decoration-color: #d2dcee !important;
   transition: all 0.3s ease;
@@ -600,4 +605,40 @@ table tr:nth-child(1n) {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Fix sub and sup */
+sub, sup {
+  /* Specified in % so that the sup/sup is the right size relative to the surrounding text */
+  font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+
+sub {
+  /* Move the subscripted text down, but only half as far down as the superscript moved up */
+  bottom: -0.25em;
+}
+
+/* Indent list */
+.indented {
+  text-indent: 4% each-line;
+  margin-left: 1.5rem;
+}
+
+.lettered-list, .lettered-list>li::before {
+  list-style-type: lower-alpha !important;
+  content: none !important;
 }

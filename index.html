@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
 
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
@@ -43,7 +46,7 @@
     <!-- END favicon -->
 
     <!-- BEGIN Info -->
-    <meta name="description" content="Jolt" />
+    <meta name="description" property="og:description" content="Jolt" />
     <meta name="title" property="og:title" content="Jolt" />
     <meta property="og:type" content="Website" />
     <meta
@@ -51,7 +54,7 @@
       property="og:image"
       content="https://Jolt-realtime.com/images/thumb.png"
     />
-    <meta name="description" property="og:description" content="Jolt" />
+    <!-- <meta name="description" property="og:description" content="Jolt" /> -->
     <meta name="author" content="Jolt" />
     <!-- END Info -->
 
@@ -146,7 +149,15 @@
             <a href="#introduction">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>0.0 Introduction</p>
+                <p>0. Introduction</p>
+              </div>
+            </a>
+          </li>
+          <li data-section="introduction" class="subitem">
+            <a href="#jolt-quickstart-guide">
+              <div>
+                <div class="bullet"><div></div></div>
+                <p>0.1 Jolt Quickstart Guide</p>
               </div>
             </a>
           </li>
@@ -154,15 +165,15 @@
             <a href="#traditional-web-application-architecture">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>1.0 Traditional Web Application Architecture</p>
+                <p>1. Traditional Web Application Architecture</p>
               </div>
             </a>
           </li>
           <li data-section="traditional-web-application-architecture" class="subitem">
-            <a href="#a-client-server-architecture">
+            <a href="#how-web-app-architectures-work">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>1.1 Subsection needs a title</p>
+                <p>1.1 How Web App Architectures Work</p>
               </div>
             </a>
           </li>
@@ -170,7 +181,7 @@
             <a href="#three-tier-architecture">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>1.2 Three-tier Architecture</p>
+                <p>1.2. The Three-Tier Architecture</p>
               </div>
             </a>
           </li>
@@ -178,43 +189,59 @@
             <a href="#beyond-the-three-tier-architecture">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>1.3 Beyond the Three-tier Architecture</p>
+                <p>1.3 Expanding Beyond the Three-Tier Architecture</p>
               </div>
             </a>
           </li>
-          <li data-section="the-jamstack">
-            <a href="#the-jamstack">
+          <li data-section="how-the-jamstack-architecture-works">
+            <a href="#how-the-jamstack-architecture-works">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>2.0 The JAMstack</p>
+                <p>2. How the JAMstack Architecture Works</p>
               </div>
             </a>
           </li>
-          <li data-section="the-jamstack" class="subitem">
-            <a href="#what-is-the-jamstack">
+          <li data-section="how-the-jamstack-architecture-works" class="subitem">
+            <a href="#the-jamstack-architecture">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>2.1 What is the JAMstack?</p>
+                <p>2.1 The JAMstack Architecture</p>
               </div>
             </a>
           </li>
-          <li data-section="the-jamstack" class="subitem">
-            <a href="#contrasting-jamstack-with-three-tier">
+          <li data-section="how-the-jamstack-architecture-works" class="subitem">
+            <a href="#contrasting-jamstack-three-tier">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>2.2 Contrasting JAMstack with Three-tier</p>
+                <p>2.2 Contrasting JAMstack with the Three-tier Architecture</p>
               </div>
             </a>
           </li>
-          <li data-section="serverless">
-            <a href="#serverless">
+          <li data-section="how-the-jamstack-architecture-works" class="subitem">
+            <a href="#advantages-of-jamstack">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>3.0 Serverless</p>
+                <p>2.3 Advantages of the JAMstack</p>
               </div>
             </a>
           </li>
-          <li data-section="serverless" class="subitem">
+          <li data-section="how-the-jamstack-architecture-works" class="subitem">
+            <a href="#tradeoffs-of-jamstack">
+              <div>
+                <div class="bullet"><div></div></div>
+                <p>2.4 Tradeoffs of the JAMstack</p>
+              </div>
+            </a>
+          </li>
+          <li data-section="the-serverless-architecture">
+            <a href="#the-serverless-architecture">
+              <div>
+                <div class="bullet"><div></div></div>
+                <p>3. The Serverless Architecture</p>
+              </div>
+            </a>
+          </li>
+          <li data-section="the-serverless-architecture" class="subitem">
             <a href="#serverless-functions">
               <div>
                 <div class="bullet"><div></div></div>
@@ -222,24 +249,24 @@
               </div>
             </a>
           </li>
-          <li data-section="jamstack-plus_serverless">
+          <li data-section="jamstack-plus-serverless" class="subitem">
             <a href="#jamstack-plus-serverless">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>4.0 JAMstack + Serverless</p>
+                <p>4. The JAMstack + Serverless Architecture</p>
               </div>
             </a>
           </li>
-          <li data-section="jamstack-plus_serverless" class="subitem">
-            <a href="#building_jamstack_plus_serverless-from-scratch">
+          <li data-section="jamstack-plus-serverless">
+            <a href="#building-jam-serverless-from-scratch">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>4.1 Building JAMstack + Serverless from Scratch</p>
+                <p>4.1 Building JAMstack + Serverless From Scratch</p>
               </div>
             </a>
           </li>
-          <li data-section="jamstack-plus_serverless-solutions" class="subitem">
-            <a href="#jamstack-plus-serverless-solutions">
+          <li data-section="jamstack-plus-serverless" class="subitem">
+            <a href="#jamstack-serverless-solution">
               <div>
                 <div class="bullet"><div></div></div>
                 <p>4.2 JAMstack + Serverless Solutions</p>
@@ -250,31 +277,79 @@
             <a href="#introducing-jolt">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>5.0 Introducing Jolt</p>
+                <p>5. Introducing Jolt</p>
               </div>
             </a>
           </li>
           <li data-section="introducing-jolt" class="subitem">
-            <a href="#the-core-of-jolt">
+            <a href="#core-of-jolt">
               <div>
                 <div class="bullet"><div></div></div>
                 <p>5.1 The Core of Jolt</p>
               </div>
             </a>
           </li>
-          <li data-section="how-jolt-deploys-applications">
-            <a href="#how-jolt-deploys-applications">
+          <li data-section="developing-and-deploying-with-jolt">
+            <a href="#developing-and-deploying-with-jolt">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>6.0 How Jolt Deploys Applications</p>
+                <p>6. Developing and Deploying With Jolt</p>
               </div>
             </a>
           </li>
-          <li data-section="jolt-plus">
-            <a href="#jolt-plus">
+          <li data-section="improving-jolt">
+            <a href="#improving-jolt">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>7.0 Jolt+</p>
+                <p>7. Improving Jolt</p>
+              </div>
+            </a>
+          </li>
+          <li data-section="improving-jolt" class="subitem">
+            <a href="#relative-paths">
+              <div>
+                <div class="bullet"><div></div></div>
+                <p>7.1 Implementing Relative Paths for Serverless Function Requests</p>
+              </div>
+            </a>
+          </li>
+          <li data-section="improving-jolt" class="subitem">
+            <a href="#atomic-deployments">
+              <div>
+                <div class="bullet"><div></div></div>
+                <p>7.2 Implementing Atomic Deployments of Infrastructure</p>
+              </div>
+            </a>
+          </li>
+          <li data-section="improving-jolt" class="subitem">
+            <a href="#improving-jolt">
+              <div>
+                <div class="bullet"><div></div></div>
+                <p>7.3 Implementing Updates to Existing Applications</p>
+              </div>
+            </a>
+          </li>
+          <li data-section="improving-jolt" class="subitem">
+            <a href="#rollbacks">
+              <div>
+                <div class="bullet"><div></div></div>
+                <p>7.4 Implementing Rollbacks</p>
+              </div>
+            </a>
+          </li>
+          <li data-section="improving-jolt" class="subitem">
+            <a href="#function-packaging">
+              <div>
+                <div class="bullet"><div></div></div>
+                <p>7.5 Packaging Function Dependencies and Environment Variables</p>
+              </div>
+            </a>
+          </li>
+          <li data-section="final-architecture" class="subitem">
+            <a href="#final-architecture">
+              <div>
+                <div class="bullet"><div></div></div>
+                <p>8.0 Final Architecture</p>
               </div>
             </a>
           </li>
@@ -282,136 +357,821 @@
             <a href="#future-work">
               <div>
                 <div class="bullet"><div></div></div>
-                <p>8.0 Future Work</p>
-              </div>
-            </a>
-          </li>
-          <li data-section="bibliography">
-            <a href="#bibliography">
-              <div>
-                <div class="bullet"><div></div></div>
-                <p>9.0 Bibliography</p>
+                <p>9. Future Work</p>
               </div>
             </a>
           </li>
         </ul>
       </aside>
+    </div>
 
       <div id="case-study" class="main-section">
         <div id="case-study-content">
           <div class="prose">
             <h1>Case Study</h1>
             <div id="introduction">
-              <h2 id="introduction">0. Introduction</h2>
-              <p>Jolt is a lightweight, open-source framework that makes it easy to develop, deploy and maintain JAMstack applications with serverless functions. It abstracts away the complexity of provisioning and managing infrastructure, allowing the developer to focus on the business logic of their application. Jolt is targeted towards developers who are interested in the easier development and low latency that the JAMstack model provides, but who also need a secure, scalable environment to perform computation that can’t be done on the client.</p>
-              <p>Before we dive into what JAMstack architecture is and why you might want to combine it with serverless functions, let’s take a look at the architecture that is traditionally used for building web applications.</p>
-              <p>To get started with Jolt, run: <strong>npm install -g @jolt-framework</strong></p>
-              <p>A user needs to configure aws credentials for the CLI and then, navigate to the directory the user wishes to initialize a project.</p>
-              <p>To explore Jade, make sure you have a public GitHub repository available. Jolt has been tested for use with React and Gatsby - to get started.</p>
-              <p>When ready, run: <strong>jolt init</strong></p>
-              <p>This will check that the user has the right AWS settings, prompt the user for initial project information that will be stored locally.</p>
-              <p>Here is a list of Jolt commands available:</p>
+              <h2>0. Introduction</h2>
+              <p>Jolt is a lightweight, open-source framework that makes it easy to develop, deploy, and maintain JAMstack applications with serverless functions. It abstracts away the complexity of provisioning and managing infrastructure, allowing the developer to focus on the business logic of their application. Jolt is targeted towards developers who are interested in the easy development, high scalability and low latency that the JAMstack model provides, but who also need a secure, scalable environment to perform computation that can’t be done on the client.</p>
+              <p>To get started, we’ll introduce the functionality that Jolt provides.</p>
+            </div>
+
+            <div id="jolt-quickstart-guide">
+              <h3>0.1 Jolt Quickstart Guide</h3>
+              <p>To get started with Jolt, run: <strong class="code-snippet">npm install -g jolt-framework</strong></p>
+
+              <p>Note: Jolt assumes that the user has <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html">configured their AWS credentials</a> locally through the AWS CLI with the command `aws configure`.</p>
+
+              <p>Here is a list of Jolt commands: (All commands should be run from the root of the application)</p>
               <table>
                 <thead>
-                    <td>Command</td>
-                    <td style="text-align: center;">Description</td>
+                    <tr>
+                      <th>Command</th>
+                      <th style="text-align: center;">Description</th>
+                    </tr>
                 </thead>
                 <tr>
                   <td>jolt init</td>
-                  <td>Creates a local config file that will be used at deployment time to deploy a JAMstack + serverless app</td>
+                  <td>Initialize an application for use with Jolt: Prompts the user to answer a series of questions about the application. Answers are stored in a local configuration file that Jolt references while running other commands.</td>
                 </tr>
                 <tr>
                   <td>jolt dev</td>
-                  <td>Launches a local development server to simulate lambdas on the local machine</td>
+                  <td>Spins up the user’s front end development server + Lambda development server in order to allow the full application to be run locally.</td>
                 </tr>
                 <tr>
-                  <td>jolt projects</td>
-                  <td>List all your existing JAMstack + serverless apps</td>
+                  <td>jolt functions</td>
+                  <td>Spins up the Lambda development server by itself.</td>
+                </tr>
+                <tr>
+                  <td>jolt deploy</td>
+                  <td>Deploys the application on AWS.</td>
                 </tr>
                 <tr>
                   <td>jolt update</td>
-                  <td>Creates a new version of an existing application and updates the associated AWS </td>
+                  <td>Builds and deploys the latest version of a previously deployed application. The underlying infrastructure is reused wherever possible.</td>
                 </tr>
                 <tr>
                   <td>jolt rollback</td>
-                  <td>Allows user to go to a previous version of an application</td>
+                  <td>Prompts the user to select from a list of versions associated with the current application. Once a version is selected, the front end and Lambdas are reverted to that version.</td>
                 </tr>
                 <tr>
                   <td>jolt destroy</td>
-                  <td>Remove an app and its associated AWS infrastructure</td>
+                  <td>Removes an application and all of its associated AWS infrastructure.</td>
+                </tr>
+                <tr>
+                  <td>jolt lambda [function_name]</td>
+                  <td>Creates a Lambda template in the functions folder with the specified function_name.</td>
                 </tr>
               </table>
-              <p>For notes on these commands and others, please visit the documentation on our GitHub page.
-              The following chapters will go into detail about the JAMstack + Serverless architecture, Jolt and how we expanded on the functionality of Jolt.</p>
-              <p>The following chapters will go into detail about the JAMstack + Serverless architecture, Jolt and how we expanded on the functionality of Jolt.</p>
+              <p>Jolt has been tested for use with React and Gatsby applications but by specifying other build commands during initialization, other frameworks can be used as well.</p>
+              <p>For more information on getting started with Jolt, please visit the documentation on our <a href="https://github.com/core-jamstack/Core-Full/blob/main/README.md">GitHub page</a>.</p>
+              <p>The following chapters will go into detail about the JAMstack + Serverless Architecture, how we built Jolt and the challenges we overcame along the way.</p>
             </div>
 
             <div id="traditional-web-application-architecture">
-              <h2>1.0 Traditional Web Application Architecture</h2>
-              <p>The term “web application architecture” refers to all of the software and hardware components that make up a web application as well as the interactions between those components. To provide some context for the JAMstack and serverless functions, we’ll start with a look at the way web application architectures have traditionally been built.</p>
+              <h2>1. Traditional Web Application Architecture</h2>
+              <p>The term “web application architecture” refers to all of the software and hardware components that make up a web application as well as the interactions between those components<a href="#reference-1"><sup>1</sup></a>. Every web application architecture has two sides, the client and the server side.</p>
             </div>
 
-            <div id="a-client-server-architecture">
-              <h3>1.1 A Client-Server Architecture</h3>
-              <p>The basic premise of web communication has remained the same since the start of the web. Using a web browser (a client), a user sends a request to a server for some content. When the server receives this request, it sends back a response with the requested content.</p>
+            <div id="how-web-app-architectures-work">
+              <h3>1.1 How Web App Architectures Work</h3>
+              <p>Communication between the client and server is performed using http requests and responses. For developers, much of defining a web app architecture is about deciding what activity happens on the client-side, and what activity occurs on the server-side.</p>
 
               <figure>
-                <img src="images/diagrams/client-server-architecture.png" alt="Client Server Architecture">
+                <img src="images/diagrams/Writeup/Traditional_Architecture.png" alt="Traditional Architecture">
                 <figcaption>A web browser (the client) makes an http request to a web server which, in this case, returns static assets such as html and images for the browser to render.</figcaption>
               </figure>
 
-              <p>There are a wide variety of different architectural patterns that applications can adopt, but one of the oldest and most widely used patterns is the three-tier architecture.</p>
+              <p>Most web applications use some form of three-tier architecture on the server side.</p>
             </div>
 
             <div id="three-tier-architecture">
-              <h3>1.2 Three-tier Architecture</h3>
-              <p>The three-tier architecture consists of three “layers” of infrastructure: the web server (seen above), the application server, and the database.</p>
+              <h3>1.2. The Three-Tier Architecture</h3>
+              <p>A three-tier architecture consists of three “layers” of infrastructure: a web server, an application server, and a database.</p>
+
+              <p>The web server is the outer layer in a three-tier architecture. Web servers mostly handle serving of static assets and routing of requests to other layers of the application infrastructure when needed.</p>
 
               <p>Application servers are built to process requests that require some computation and thus can’t be handled by a web server which is optimized for delivering static content. The application server can handle dynamic processes like payment processing, inventory management, or any other business logic the application needs.</p>
 
-              <p>With the application server providing dynamic content and the web server serving up static content, we need somewhere to actually store the data associated with this content. This brings us to the final piece of a 3 three-tier architecture, the database.</p>
+              <p>With the application server providing dynamic content and the web server serving up static content, we need somewhere to actually store the data associated with this content. This brings us to the final layer in a three-tier architecture, the database.</p>
 
-              <p>There are many different kinds of databases, but at a high level, they all have the responsibility of storing persistent data so that it can be retrieved by the application or web servers on demand and sent to clients.</p>
+              <p>The database stores persistent data so that it can be retrieved by the application or web servers on demand and sent to clients.</p>
 
               <figure>
                 <img src="images/diagrams/traditional-architecture.png" alt="Traditional 3 Tier Architecture">
-                <figcaption>The traditional architecture</figcaption>
+                <figcaption>The three-tier architecture</figcaption>
               </figure>
+
+              <p>With this completed three-tier architecture, a developer has a back end that can store data, perform computation and serve up static and dynamic content to users.</p>
             </div>
 
             <div id="beyond-the-three-tier-architecture">
-              <h3>1.3 Expanding Beyond the Traditional Architecture</h3>
-              <p>As applications grow in scope and popularity, additional pieces of infrastructure may be needed such as:</p>
+              <h3>1.3 Expanding Beyond the Three-Tier Architecture</h3>
+              <p>As applications grow in scope and popularity, additional pieces of infrastructure may be needed. For instance:</p>
               <ul>
-                <li>Additional web, application, or database servers</li>
+                <li>Additional web, application or database servers</li>
                 <li>Load balancers to distribute traffic across the additional servers</li>
                 <li>Caching layers</li>
               </ul>
 
+              <figure>
+                <img src="images/diagrams/Writeup/Complex_Three_tier_architecture.png" alt="Complex Three-Tier Architecture">
+                <figcaption>Expanding the three-tier architecture with a load balancer and additional web, application, and database servers.</figcaption>
+              </figure>
+
+              <p>Implementing more complex architectures allows developers to have more control over their application. However, the additional complexity results in:</p>
+              <ul>
+                <li>Increased difficulty of developing and maintaining the application</li>
+                <li>Increased time and financial costs associated with provisioning and managing the additional infrastructure</li>
+              </ul>
+
+              <p>New architectures have emerged that help to abstract away the complexity and cost of building and maintaining web applications. One such architecture is the JAMstack architecture.</p>
             </div>
 
-            <h2 id="the-jamstack">
-              2. The JAMstack
-            </h2>
+            <div id="how-the-jamstack-architecture-works">
+              <h2>2. How the JAMstack Architecture Works</h2>
+              <figure>
+                <blockquote>"A modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup."</blockquote>
+                <figcaption>- Mathias Biilmann, CEO, Founder of Netlify<a href="#reference-2"><sup>2</sup></a></figcaption>
+              </figure>
+              <p>JAMstack as a term was popularized by Chris Bach and Matthias Biilmann of Netlify. The above quote by Biilmann nicely summarizes the 3 pillars of the JAMstack architecture: JavaScript, APIs and Markup. Let’s break each of those down.</p>
+            </div>
 
-            <h3 id="what-is-the-jamstack">2.1 What is the JAMstack?</h3>
+            <div id="jamstack-markup">
+              <h4>Markup</h4>
+              <p>In a three-tier architecture, servers usually perform just in time rendering. This means that content is generated when it is requested by a client. By generating content when it is requested, sites can provide a dynamic experience with personalized or context dependent content. However, the tradeoff with this approach is that the process of generating content for each request costs extra time and memory.</p>
+
+              <p>Instead of paying this cost with each request, the JAMstack approach relies on ahead of time rendering. This process involves pre-building pages which is typically done using a static site generator such as Hugo or Gatsby.</p>
+
+              <figure>
+                <img src="images/diagrams/Writeup/Pre_Building_Content.png" alt="Prebuilding Content">
+                <figcaption>The typical flow of a static site generation process wherein the website content is assembled into static HTML pages, uploaded to a CDN, and then accessed by the user.</figcaption>
+              </figure>
+
+              <p>This process bundles the application code into a collection of static HTML files. While this can take a while, after it’s been done once, the resulting collection of static files is ready to be served up and rendered immediately on the client. Phil Hawksworth, Director of Developer Experience at Netlify refers to this as “Doing the work now so your servers don’t have to<a href="#reference-3"><sup>3</sup></a>”.</p>
+
+              <p>Contrast this with the three-tier architecture where pages are re-built for every request, and it becomes clear that an approach of pre-rendering content will lead to much faster page load times in the long run.</p>
+
+              <p>After the content has been pre-built, it is cached on globally distributed CDN (Content Delivery Network) servers and. Now when a page is requested, the CDN server nearest to the client can send the requested page with minimal latency. The use of a CDN for serving static content eliminates the need for running a web server.</p>
+            </div>
+
+            <div id="jamstack-apis">
+              <h4>APIs</h4>
+
+              <p>The next piece of the JAMstack centers around the idea that most of the work traditionally done by the application server and database server layers can be performed by 3rd party services. The job of handling things like search, authentication or payment processing can be outsourced to domain experts who provide reliable, fully featured solutions that can be easily plugged into an application without the cost and complexity of building your own.</p>
+
+              <figure>
+                <img src="images/diagrams/Writeup/3rd_party_APIs.png" alt="Third-Party APIs">
+                <figcaption>Popular 3rd Party APIs</figcaption>
+              </figure>
+
+              <p>By using 3rd party APIs, complex computation and even data persistence can be handled without the need for database and application servers.</p>
+            </div>
+
+            <div id="jamstack-javascript">
+              <h4>JavaScript</h4>
+
+              <p>Client-side JavaScript is used to retrieve and render the kind of dynamic content that would traditionally have been handled by a backend language like Node, Python, Ruby, etc. The browser uses JavaScript to make client-side calls to 3rd party APIs and then to perform DOM manipulation to update the view on the client side as needed.</p>
+            </div>
+
+            <div id="the-jamstack-architecture">
+              <h3>2.1 The JAMstack Architecture</h3>
+              <figure>
+                <img src="images/diagrams/Writeup/JAMstack_Architecture.png" alt="JAMstack Architecture Diagram">
+                <figcaption>The JAMstack architecture: <strong>J</strong>avaScript in the browser, 3rd party <strong>A</strong>PI calls, <strong>M</strong>arkup from a CDN</figcaption>
+              </figure>
+              <p>An application built with a JAMstack architecture uses client-side JavaScript to make API calls and perform DOM manipulations. 3rd APIs handle processes like search, authentication, or data persistence. Finally, Markup is cached and served from a CDN to provide fast, scalable content to clients.</p>
+            </div>
+
+
+            <div id="contrasting-jamstack-three-tier">
+              <h3>2.2 Contrasting JAMstack with the Three-tier Architecture</h3>
+              <figure>
+                <img src="/images/diagrams/Writeup/JAMstack_vs_Three_tier.png" alt="JAMStack versus Three-Tier Diagram">
+                <figcaption>Contrasting the Three-tier architecture with the JAMstack architecture
+.</figcaption>
+              </figure>
+
+              <p>By viewing the JAMstack architecture alongside the three-tier architecture, it’s easy to see how they differ. With JAMstack, the serving of static content typically handled by the web server is now handled by a CDN. The business logic and persistent storage that would traditionally have been handled by a database and application server are now all abstracted away into 3rd party APIs that can perform any computation or data persistence that the application needs.</p>
+            </div>
+
+            <div id="advantages-of-jamstack">
+              <h3>2.3 Advantages of the JAMstack</h3>
+              <p>Beyond the simpler developer experience of not needing to build and manage servers, using the JAMstack has several major benefits<a href="#reference-4"><sup>4</sup></a>:</p>
+
+                <ol class="indented">
+                  <li>
+                    <h4>Performance</h4>
+                    <p>By pre-building pages and using a CDN to cache and serve all static content, response times are faster because the page rendering that would have occurred at response time has already been completed by a static site generator.</p>
+                  </li>
+                  <li>
+                    <h4>Security</h4>
+                    <p>With no backend servers to manage, the surface area of the application is much smaller. With fewer pieces of infrastructure, the number of potential security risks is greatly reduced.</p>
+                  </li>
+                  <li>
+                    <h4>Scalability</h4>
+                    <p>A JAMstack architecture eliminates the need for manually adding and removing servers in order to scale your application, as is often required with a three-tier architecture. Because application traffic is handled by CDN servers which are managed by a cloud provider, scalability comes built in, as the cloud provider takes care of fluctuations in traffic to your application and only bills you for what you use.</p>
+                  </li>
+                </ol>
+
+                <p>While there are plenty of advantages to the JAMstack approach, it’s important to be aware that it’s not a fit for every use case and tradeoffs are made when using it.</p>
+            </div>
+
+            <div id="tradeoffs-of-jamstack">
+              <h3>2.4 Tradeoffs of the JAMstack</h3>
+
+              <p>There are two main tradeoffs that come with a JAMstack Architecture:  long build times and the lack of custom compute.</p>
+
+              <ol class="indented">
+                <li>
+                  <h4>Long Build Times</h4>
+                  <p>Depending on the size of the application, generating static pages with a static site generator such as Hugo or Gatsby can take anywhere from minutes to hours<a href="#reference-5"><sup>5</sup></a>.
+                    For sites that receive constant updates, like a news site, the need to frequently rebuild static pages would be a burden that could make the JAMstack approach infeasible.
+                    </p>
+                </li>
+                <li>
+                  <h4>Lack of Custom Compute</h4>
+                  <p>There are some cases where computation needs to be done that can’t be executed in the browser and for which no 3rd party API provides a complete solution.</p>
+                  <p>In these cases, a backend server could be spun up, however doing so reintroduces some of the architectural complexity that the JAMstack architecture tries to abstract away.</p>
+                </li>
+              </ol>
+              <p>A way of performing secure computation is needed that doesn’t require spinning up and managing a server. One way to deal with this is by implementing a serverless architecture.</p>
+            </div>
+
+
+            <div id="the-serverless-architecture">
+              <h2>3. The Serverless Architecture</h2>
+              <p>The term “serverless” architecture refers to a cloud computing model where the servers are entirely managed by a 3rd party. In essence, the developer writes the business logic of their application and a cloud provider takes care of the provisioning and management of servers. Most often the term is used to refer to serverless functions, or Function as a Service (FaaS).</p>
+            </div>
+
+            <div id="serverless-functions">
+              <h3>3.1 Serverless Functions</h3>
+              <p>One popular cloud provider, Amazon Web Services, describes serverless functions as <q>"A compute service that lets you run code without provisioning or managing servers... or managing runtimes."</q><a href="#reference-6"><sup>6</sup></a></p>
+
+              <p>Serverless functions allow developers to work at a level of abstraction where they only need to select a runtime and write the code needed to achieve the desired functionality. After that, the code is given to a FaaS provider who will handle starting the functions (and stopping them when not in use), scaling them as traffic increases and decreases, and managing all of the underlying infrastructure.</p>
+
+              <figure>
+                <div class="swiper-container scalable-serverless-functions">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/client 1.png"/></div>
+                    <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/client 2.png"/></div>
+                    <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/client 3.png"/></div>
+                  </div>
+                </div>
+                <script>
+                  var swiper = new Swiper(".scalable-serverless-functions", {
+                    observer: true,
+                    observeParents: true,
+                    autoplay: {
+                      delay: 1500,
+                    }
+                  });
+                </script>
+                <figcaption>As more requests are made, serverless functions easily scale up or down to meet demand.</figcaption>
+              </figure>
+
+              <p>There are several technical limitations to be aware of when using serverless functions.</p>
+
+              <ol class="indented">
+                <li>
+                  <h4>Execution Time Limits</h4>
+                  <p>Serverless functions are generally designed for shorter computation tasks. Maximum execution time limits range from about 5 to 15 minutes.</p>
+                </li>
+                <li>
+                  <h4>Cold Starts</h4>
+                  <p>When a function has not been used for at least 5-10 minutes, a delay called a cold start occurs because the function needs to be spun up again. Cold starts result in additional latency and must be factored into application design.</p>
+                </li>
+              </ol>
+            </div>
+
+            <div id="jamstack-plus-serverless">
+              <h2>4.0 The JAMstack + Serverless Architecture</h2>
+              <p>Serverless functions provide a solution for the lack of custom compute inherent in the JAMstack architecture. The combination of JAMstack and serverless is becoming so popular that Ryan Coleman, a VP of Engineering at a multi-million dollar app deployment company, said that, <q>“Serverless + JAMstack is where web app architectures are going<a href="#reference-7"><sup>7</sup></a>.”</q></p>
+
+              <p>A common use case for JAMstack + serverless is dealing with secret API keys when interacting with a 3rd party API like Stripe<a href="#reference-8"><sup>8</sup></a>.</p>
+
+              <p>When a user visits an e-commerce site that uses Stripe to process payments, the Stripe front-end client can be used to collect details related to billing. However, in order to checkout, the Stripe backend client is used, which requires an API key. Since this is a secret key that can’t be sent directly to the client for security reasons, a secure computing environment is needed to store the key and interface with Stripe’s API.</p>
+
+              <p>Serverless functions provide a way of securely interacting with the Stripe backend API.</p>
+
+              <figure>
+                <img src="images/diagrams/Writeup/JAMstack_Serverless_architecture_Stripe.png" alt="Stripe using Jamstack plus Serverless architecture">
+                <figcaption>Using serverless functions to interact with the Stripe backend API for a JAMstack application.</figcaption>
+              </figure>
+
+              <p>In a JAMstack + serverless application, the payment information can be sent from the client to a serverless function that holds the Stripe API key. The function can then securely contact Stripe on the client’s behalf, await a response and then send the confirmation back to the client. This approach allows for secure processing of payments without the need to provision and manage complicated back end servers.</p>
+
+              <p>By adding serverless functions to the JAMstack architecture, applications regain the ability to perform custom computation that was lost by removing backend servers from the architecture.</p>
+            </div>
+
+            <div id="building-jam-serverless-from-scratch">
+              <h3>4.1 Building JAMstack + Serverless From Scratch</h3>
+              <p>Now that we’ve introduced the JAMstack + Serverless architecture and seen why a JAMstack application might need serverless functions, we’ll take a look at the 4 core pieces of infrastructure needed to deploy such an application:</p>
+
+              <ol class="indented">
+                <li><strong>Content Delivery Network</strong></li>
+                <li><strong>Static Asset Store (Origin)</strong></li>
+                <li><strong>API Gateway</strong></li>
+                <li><strong>Serverless Functions</strong></li>
+              </ol>
+
+              <!-- Swiper -->
+              <div class="swiper-container jam1to4">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Carousel/JAMstack + Serverless Infrastructure: CDN 1.png"/>
+                      <figcaption>
+                        <h4>Content Delivery Network</h4>
+                        <p>A content delivery network, or CDN, is a globally distributed network of servers designed to cache web content and serve it to clients with minimal latency. Because of their global scope, client requests can be sent to a CDN server nearest to them, instead of needing to be routed to a central server farther away. This results in much faster response times. In addition, CDNs are highly scalable because increased traffic to an application is automatically spread out to other CDN servers in the proximity of the user.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Carousel/JAMstack + Serverless Infrastructure: Static Asset Store 2.png"/>
+                      <figcaption>
+                        <h4>Static Asset Store</h4>
+                        <p>The static assets that make up a JAMstack application aren’t actually hosted on CDN servers. Instead, the files need to be stored in a location that acts as a source of truth. This location is known as the “origin”. Files on the origin are retrieved by the CDN and cached before they are served to clients.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Carousel/JAMstack + Serverless Infrastructure: API Gateway 4.png"/>
+                      <figcaption>
+                        <h4>API Gateway</h4>
+                        <p>Serverless functions aren’t accessible by the client out of the box. In order to allow requests to be sent to serverless functions, an API gateway is needed. To connect a serverless function to the gateway, the route and method that will be used to reach the function must be specified. Then, the function is integrated into the Gateway so that requests sent to the gateway at that route/method combination can be proxied to the function. When a request is received by a function, it gets invoked and the resulting output is returned in a response to the client via the gateway.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <!-- Initialize Swiper -->
+              <script>
+                var swiper = new Swiper(".jam1to4", {
+                  pagination: {
+                    el: ".swiper-pagination",
+                    type: "progressbar",
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                  observer: true,
+                  observeParents: true,
+
+                });
+              </script>
+
+              <h4>Manually Deploying a JAMstack + Serverless Application</h4>
+              <p>At a minimum, in order to get a JAMstack application with serverless functions running manually, the 4 pieces of infrastructure discussed above need to be provisioned on a cloud provider. When done using Amazon Web Services through their browser console, more than 50 individual steps are required. Even if the developer knows what to do, this is a tedious and time consuming process.</p>
+
+              <video src="images/diagrams/Writeup/Manually_deploying_to_AWS.mov"  autoplay style="width: 100%; height: 100%;"type="video/mov"></video>
+
+              <p>There are a number of solutions that streamline this process for developers, avoiding the hassle of provisioning and managing infrastructure so they can instead focus on building the business logic of the application.</p>
+
+            </div>
+
+            <div id="jamstack-serverless-solution">
+              <h3>4.2 JAMstack + Serverless Solutions</h3>
+
+              <p>These solutions tend to fall into one of two major categories: JAMstack focused or DIY<a href="#reference-9"><sup>9</sup></a>.</p>
+
+              <h4>JAMstack Focused Solutions</h4>
+              <figure>
+                <img src="images/diagrams/Writeup/Comparison_Netlify_Vercel.png" alt="Diagram comparing netlify and vercel">
+              </figure>
+              <p>Netlify and Vercel are two companies we explored that provide a JAMstack focused development experience. They streamline development and take care of the deployment and management of JAMstack applications with serverless functions. With these solutions, a developer writes code and provides some configuration details and they take care of the rest of the work. They also come with many additional useful features like a local development server and continuous deployment via version control tools like Github.</p>
+
+              <p>These solutions make creating and deploying JAMstack + serverless applications quick and easy, but they do come with a few tradeoffs:</p>
+              <ul>
+                <li>They are not fully open source</li>
+                <li>Developers do not have direct access to the cloud infrastructure their application runs on, so the ability to customize how applications are deployed and managed is limited.</li>
+                <li>More stringent limitations are placed on resource use. E.g. Fewer monthly free Lambda invocations and execution time limits on Lambdas.</li>
+              </ul>
+
+              <h4>DIY Solutions</h4>
+
+              <figure>
+                <img src="images/diagrams/Writeup/Comparison_DIY.png" alt="DIY versus JAMStack`">
+              </figure>
+
+              <p>DIY solutions generally fall under the heading of Infrastructure as Code, or IAC. IAC tools like Serverless Framework and AWS SAM allow the developer to describe the needed infrastructure in code. Using these tools, developers can create a repeatable, programmatic method of provisioning and deploying JAMstack + Serverless applications. Since you’re creating the infrastructure on your own AWS account, you have access to the underlying infrastructure if you need to customize things later.</p>
+
+              <p>The primary downsides of using these DIY solutions are:</p>
+
+              <ul>
+                <li>The steep learning curve</li>
+                <li>The complexity involved in getting started</li>
+              </ul>
+
+              <h4>Finding a Middle Ground</h4>
+              <p>After exploring a range of options for creating JAMstack + Serverless applications on both the DIY and JAMstack focused ends of the spectrum, we felt that there was room for a solution that fit somewhere in the middle.</p>
+
+              <figure>
+                <img src="images/diagrams/Writeup/Comparison_JAMstack_DIY.png" alt="">
+              </figure>
+            </div>
+
+            <div id="introducing-jolt">
+              <h2>5. Introducing Jolt</h2>
+              <p>We built Jolt with the goal of providing the ease of use of Netlify or Vercel all on a user’s own infrastructure. Jolt is fully open source and the infrastructure that applications are run on is provisioned on the user’s AWS account to allow for more fine-grained control when it’s needed. We chose AWS as our cloud provider because of its prevalence in the industry and our comfort with the tools and services they provide.</p>
+
+              <figure>
+                <img src="images/diagrams/Writeup/Comparison_All_Jolt.png" alt="Comparing all solutions">
+              </figure>
+            </div>
+
+            <div id="core-of-jolt">
+              <h3>5.1 The Core of Jolt</h3>
+
+              <p>When we set out to build the core architecture, we decided to start by automating the 50+ steps involved in deploying a JAMstack + serverless application on AWS. Specifically, we wanted to provision: a CDN, a Static Asset Store (Origin), Serverless Functions and an API gateway all on AWS.</p>
+
+              <p>We decided to use AWS’ object store, S3, as the origin where static files are stored. Next, we use AWS’ CDN, CloudFront, to retrieve content from S3 and cache it on the global network of CDN servers.</p>
+
+              <p>For serverless functions, Jolt uses AWS Lambda. Finally, in order to invoke the Lambdas, an AWS API Gateway instance is created and each Lambda is integrated into the gateway as a separate route.</p>
+
+              <figure>
+                <img src="images/diagrams/Writeup/Jolt_Core.png" alt="Jolt's core diagram">
+                <figcaption>The core architecture of a Jolt application.</figcaption>
+              </figure>
+
+
+            </div>
+
+            <div id="developing-and-deploying-with-jolt">
+              <h2>6. Developing and Deploying With Jolt</h2>
+              <p>With the diagram of the core architecture of a Jolt application in mind, we’ll take a look at the 3 phases involved in deploying an application:</p>
+
+              <ol class="indented">
+                <li>Setup</li>
+                <li>Building</li>
+                <li>Deployment</li>
+              </ol>
+
+              <h4>Setup</h4>
+              <p>In order to provide an easy and intuitive developer experience, Jolt has some guidelines around how developers initialize and structure their applications.</p>
+
+              <h4>Initialization</h4>
+              <figure>
+                <img src="images/diagrams/Writeup/Gifs/jolt_init.gif" alt="Jolt init command">
+              </figure>
+
+              <p>Before deploying an application, there are a few configuration details Jolt needs. Jolt uses the <strong class="code-snippet">jolt init</strong> command to guide users through a series of prompts that gather this configuration information which is saved to a JSON file for later use. In particular, the information Jolt needs to deploy applications is as follows:</p>
+
+              <ol class="indented">
+                <li><strong>The dependency installation command (ie: npm install):</strong> Ensures that all of the dependencies required by the front-end and Lambdas are installed before deployment begins.</li>
+                <li><strong>The build command (ie: <em class="code-snippet">npm run build</em>):</strong> Builds the front end codebase into a collection of static assets prior to deployment.</li>
+                <li><strong>The name of the user’s functions folder:</strong> The location where serverless functions and their environment variables are stored along with any dependencies.</li>
+                <li><strong>The user’s default AWS region:</strong>sed during deployment to specify which region the infrastructure should be provisioned in.</li>
+              </ol>
+
+              <h4>The Functions Folder</h4>
+              <p>Functions are defined in a separate functions folder located in the root of the application. The functions folder contains a collection of `.js` files, each of which represents a Lambda. In addition, a `package.json` file is needed in order to include any dependencies required by the functions. Finally, environment variables are defined in a `.env` file that lives alongside the functions.</p>
+
+              <h4>Creating Functions</h4>
+              <p> A basic Lambda function looks like this:</p>
+
+              <figure>
+                <img src="images/diagrams/Writeup/sampleFunction.png" alt="A sample Function for jolt">
+                <figcaption>Each function must conform to the syntax required for all Lambdas, like the example above. (There are some additional parameters that are passed to the function when it is invoked which you can read more about <a href="https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html">here</a>.)</figcaption>
+              </figure>
+
+              <h4>Function Templates</h4>
+
+              <p>For users who are unfamiliar with the Lambda syntax, or who want a shortcut for creating a Lambda, entering the command `jolt lambda` and the path they want the lambda to have will automatically create a function inside the user’s functions folder.</p>
+
+              <figure>
+                <img src="images/diagrams/Writeup/jolt-functions-demo.gif" alt="jolt Functions Demo">
+                <figcaption>Creating a function template with <strong class="code-snippet">jolt lambda</strong>.</figcaption>
+              </figure>
+
+              <h4>Building</h4>
+              <p>Once the application is ready for deployment, the <strong class="code-snippet">jolt deploy</strong> command makes sure that all required dependencies have been installed and then begins the build process using the build command specified by the user during initialization. The specifics of the build process vary depending on the build tool (<strong class="code-snippet">gatsby build</strong>, <strong class="code-snippet">react-scripts build</strong>, etc.) being used, but at a high level the following occurs:</p>
+
+              <ol class="indented">
+                <li>Application code is compiled into a collection of static files</li>
+                <li>Static files are minified to to reduce file sizes by removing unnecessary white space, truncating variable names, etc. This results in smaller file sizes.</li>
+                <li>Code is transpiled to use syntax that is supported by older browsers</li>
+                <li>Wherever possible, code JavaScript, HTML and CSS is bundled into one file to save the client from needing to go through multiple request response cycles for a single page.</li>
+              </ol>
+
+              <p>In addition to the building of front end application code, Jolt also prepares functions for deployment to AWS Lambda. Each function is zipped up along with its dependencies so that the function code and its environment variables can be sent to AWS during the deployment process.</p>
+
+              <h4>Deployment</h4>
+              <p>Jolt deploys a JAMstack + Serverless App with a single command.</p>
+
+              <!-- Swiper -->
+              <div class="swiper-container deploy-jolt">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Carousel/Jolt Deploy 0.png"/>
+                      <figcaption><h4>Jolt Deploy</h4>After running <strong class="code-snippet">jolt deploy</strong> from the root of the application, the necessary infrastructure will automatically be provisioned on AWS and the application code along with the serverless functions will be deployed to CloudFront and Lambdas, respectively.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Carousel/Jolt Deploy 1.png"/>
+                      <figcaption>
+                        <h4>Creating a Bucket</h4>
+                        <p>The first step in the deployment process is to create a new bucket on S3. The S3 bucket serves as the origin for content cached on CloudFront.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Carousel/Jolt Deploy 2.png"/>
+                      <figcaption>
+                        <h4>Creating an API Gateway</h4>
+                        <p>Next, A new API Gateway is created. The gateway is used to proxy client requests to the appropriate Lambda.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Carousel/Jolt Deploy 3.png"/>
+                      <figcaption>
+                        <h4>Deploying Lambdas</h4>
+                        <p>Since AWS Lambda expects functions to be zipped before they are deployed. each function in the user’s <strong class="code-snippet">functions</strong> folder gets zipped up along with any required dependencies and is sent off to S3 for storage.</p>
+                        <p>For each function, its environment variables (if present) are retrieved from the local environment and a new Lambda is provisioned on AWS from the zipped function code (stored on S3) and the relevant environment variables.</p>
+                        <p>Finally, a new route is created on the API Gateway that matches the path and name of the function within the functions folder and the newly created Lambda is integrated into the Gateway at that route.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Carousel/Jolt Deploy 4.png"/>
+                      <figcaption>
+                        <h4>Uploading Static Assets</h4>
+                        <p>After creating Lambdas and integrating them into the API Gateway, Jolt deploys the front end of the application. First, the static assets generated during the build process are sent to the S3 bucket.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Carousel/Jolt Deploy 5.png"/>
+                      <figcaption>
+                        <h4>Configuring CloudFront</h4>
+                        <p>Finally a new distribution is created on CloudFront. To do this, Jolt gives CloudFront the URL of the origin where the built application files are stored on S3. When requests for the application come into CloudFront, the requested content is retrieved from S3 and cached so that subsequent requests can be served without needing to go back to the origin.</p>
+                        <p>Once the CloudFront distribution has been created, CloudFront begins propagating the new distribution to CDN servers all over the globe. This process can take upwards of 10 minutes to finish, but once complete, the new JAMstack + serverless application is live.</p>
+                        <p>From the user’s perspective, the 50+ steps involved in manually provisioning and deploying the application are all automated and handled by the <strong class="code-snippet">jolt deploy</strong> command.</p>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <!-- Initialize Swiper -->
+              <script>
+                var swiper = new Swiper(".deploy-jolt", {
+                  pagination: {
+                    el: ".swiper-pagination",
+                    type: "progressbar",
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                  observer: true,
+                  observeParents: true,
+
+                });
+              </script>
+            </div>
+
+            <div id="improving-jolt">
+              <h2>7.0 Improving Jolt</h2>
+              <p>Our initial vision for Jolt was to create a framework that made it easy to deploy JAMstack + serverless applications. With this accomplished, we discovered that there were a number of aspects related to <u>development</u> and <u>management</u> of applications that lacked the ease of use that we wanted to provide with Jolt. So, we decided to improve upon Jolt.</p>
+
+              <p>This process proved to have many technical challenges mainly due to two factors: we were <strong>working with cloud infrastructure</strong> and the <strong>JAMstack + serverless architecture was different from a more traditional three-tier architecture</strong>. Below are some of the key features we implemented while improving Jolt:</p>
+
+              <ol class="indented">
+                <li>Relative paths for requests sent from the JAMstack application to serverless functions</li>
+                <li>Atomic deployment of infrastructure</li>
+                <li>Easy updates to existing Jolt applications</li>
+                <li>Rollbacks to revert the application to any previous version</li>
+                <li>Packaging of dependencies and environment variables for serverless functions</li>
+                <li>A local development environment for testing Lambdas</li>
+              </ol>
+            </div>
+
+            <div id="relative-paths">
+              <h3>7.1 Implementing Relative Paths for Serverless Function Requests</h3>
+              <p>The first feature that Jolt provides is the ability to use relative paths to connect the JAMstack application to serverless functions.</p>
+
+              <p>Before getting into how Jolt provides this functionality, a basic understanding of the difference between a relative and an absolute path is necessary.</p>
+
+              <figure><img src="images/diagrams/Writeup/Relative_vs_Absolute_Paths.png" alt="Relative vs absolute paths"></figure>
+
+              <p>An <strong>absolute path</strong> is analogous to a full mailing address. If they have the full path, a user can send a request to a location anywhere in the world. In the context of the web, an absolute path is usually a URL. A <strong>relative path</strong> is analogous to only knowing the apartment number of a location. You can only send a request there if you’re already in the building.</p>
+
+              <p>In a web application, if a request is made to a relative path, that request will be sent to the same origin (the same “apartment building”) at the relative path location (the “apartment number”).</p>
+
+              <p>For a web application that has its own back-end servers, relative path requests are sent to the back-end server by default. However, when sending requests to Lambdas, they need to be accessed via the API Gateway, which lives at a different origin and thus, can't be accessed with a relative path. Instead, Lambda requests need to be made using an absolute path.</p>
+
+              <p>This presents a problem for two reasons:</p>
+              <ol class="indented">
+                <li>The cross-origin resource policy prevents requests from being made between different origins (the client and the API Gateway) by default.</li>
+                <li>The developer doesn't know the address of the API Gateway while building the application because the gateway is only created after the application is deployed with Jolt.</li>
+              </ol>
+
+              <h4>CORS</h4>
+              <p>To allow applications to send cross-origin requests, Jolt configures the API Gateway to allow cross origin resource sharing (CORS) when the gateway is provisioned.</p>
+
+              <h4>Lambda@Edge</h4>
+              <p>To solve the problem of providing developers with a way to create requests to Lambdas before the API Gateway has been created, Jolt uses a feature of CloudFront called Lambda@Edge. Just like ordinary Lambdas, Lambda@Edge provides a scalable, serverless computing environment, however these Lambdas are invoked on CDN servers. This means that they live closer to clients than regular Lambdas and can also be used to intercept requests sent to CloudFront.</p>
+
+              <p>Jolt uses Lambda@Edge to do the following:</p>
+
+              <ol class="indented">
+                <li>Receive client requests sent to CloudFront using a relative path.</li>
+                <li>Check to see if those requests are intended for a regular Lambda. By having developers add the path prefix <strong class="code-snippet">/.functions</strong> to all Lambda requests made in their front-end code, Lambda@Edge can identify requests intended for Lambdas.</li>
+                <li>The Lambda@Edge responds to Lambda requests with a 308 Permanent Redirect. This response includes a <strong class="code-snippet">location</strong> header that specifies the absolute path needed to reach the Lambda on API Gateway.</li>
+                <li>When the client receives the 308 response, it uses the URL in the <strong class="code-snippet">location</strong> header to issue a new request using the same request method. This new request is sent to the intended Lambda via API Gateway.</li>
+                <li>An additional benefit of using a 308 Permanent Redirect is the fact that the API Gateway location will be cached in the browser. Future requests to the Lambda can then be sent directly to the API Gateway without requiring the initial request-response to Lambda@Edge.</li>
+              </ol>
+
+              <figure>
+                            <!-- Swiper -->
+                <div class="swiper-container edgeLambda">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/Lambda@Edge 1.png"/></div>
+                    <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/Lambda@Edge 2.png"/></div>
+                  </div>
+                </div>
+
+                <!-- Initialize Swiper -->
+                <script>
+                  var swiper = new Swiper(".edgeLambda", {
+                    observer: true,
+                    observeParents: true,
+                    autoplay: {
+                      delay: 3000,
+                    },
+                  });
+                </script>
+                <figcaption>How Jolt uses Lambda@Edge to redirect relative path requests to Lambdas via an API Gateway. </figcaption>
+              </figure>
+            </div>
+
+            <div id="atomic-deployments">
+              <h3>7.2 Implementing Atomic Deployments of Infrastructure</h3>
+
+              <p>Another feature that jolt provides is atomic deployments. In an atomic deployment, either all resources are deployed or none of the resources are deployed.</p>
+
+              <figure>
+                <img src="images/diagrams/Writeup/Atomic_Deploys_-_Error_when_deploying.png" alt="">
+                <figcaption>Errors can occur during deployment for many reasons including an incorrectly configured Lambda.</figcaption>
+              </figure>
+
+              <p>To understand why this is important, consider what happens when an error occurs in the middle of deployment. If Jolt crashed halfway through provisioning Lambdas for an application, the application would exist in a half finished state. While the application would most likely be non-functional, the already provisioned infrastructure would continue to exist on the user’s AWS account. To avoid this, Jolt needed a way to ensure that an application will be reverted to its original state if a deployment fails.</p>
+
+              <p>Jolt utilizes two different methods to achieve atomic deployments:</p>
+
+              <ul>
+                <li>A runtime deployment data structure</li>
+                <li>Versioning of reusable infrastructure</li>
+              </ul>
+
+              <h4>Runtime Deployment Data Structure</h4>
+              <p>To keep track of the infrastructure that has been provisioned during runtime, Jolt tracks everything it has deployed so far in an Object data structure. As each piece of infrastructure is provisioned, an identifier for that piece (called an ARN) is added to the “deployment object” (the data structure). If an error occurs, Jolt initiates a teardown process that removes each piece of infrastructure contained in the deployment object. This way, the deployment fails without leaving any infrastructure artifacts behind on the user’s AWS account.</p>
+
+              <figure>
+                <img src="images/diagrams/Writeup/deployment_object.png" alt="Deployment object as JSON">
+                <figcaption>An example of a deployment object containing all of the infrastructure for a Jolt application.</figcaption>
+
+              </figure>
+
+                <p>However, using a deployment object at runtime does not handle situations where pre-existing infrastructure is being updated. If we naively delete every piece of infrastructure when deployment fails, the entire application will be removed. If the application is being updated to a new version, we’d like the old versions of each piece of infrastructure to be preserved if the update fails. In order to ensure that the old version remains if an update fails, we chose to version each reusable piece of infrastructure.</p>
+
+                <h4>Versioning of Reusable Infrastructure </h4>
+
+                <p>Versioning means creating a new version of the current infrastructure instead of overwriting it during a deployment. For Jolt applications: Lambdas, S3 Objects, API Gateway and the Lambda@Edge function are all resources that can be reused in successive updates by creating a new version of each.</p>
+
+                <figure>
+                  <img src="images/diagrams/Writeup/Versioning.png" alt="Versioning Reusable infrastructure">
+                  <figcaption>Versioning in a nutshell: Each time a function is created,  a new version is automatically created while maintaining all previous versions.</figcaption>
+                </figure>
+
+                <p>In an initial deployment, Jolt creates each of these resources and sets that resource as the first version. When an update occurs, if a piece of infrastructure already exists, a Lambda for instance, a new version of the Lambda is created rather than an entirely new instance of the Lambda. Versioning Lambdas and other resources in this way is a bit like adding layers to a cake. Rather than baking an entirely new cake every time, we simply create a new layer and place it on top of the old layer. This means that in the event of a failure, we can remove the top layer leaving behind the layer, or version, that existed before the update began.</p>
+
+                <p>By tracking infrastructure in a deployment object at runtime and also versioning each piece of infrastructure, Jolt ensures that deployments are atomic and eliminates the risk of deleting pre-existing infrastructure if a deployment or update fails.</p>
+            </div>
+
+            <div id="updating-applications">
+              <h3>7.3 Implementing Updates to Existing Applications</h3>
+
+              <p>As we alluded to above, a third feature Jolt provides is the ability to update applications.</p>
+
+              <p>In order to update existing infrastructure, a way of keeping a persistent record of the current infrastructure an application is using is needed. A database can provide persistent storage for information about the current state of an application.</p>
+
+              <h4>Choosing a Database</h4>
+
+              <p>When determining which AWS database service to use for keeping track of application state, Jolt explored two potential options: RDS, a relational database service and DynamoDB, a document database service. In short, these were the tradeoffs:</p>
+
+              <figure><img src="images/diagrams/Writeup/Dynamo_vs_RDS.png" alt="DynamoDB vs RDS"></figure>
+
+              <p>Jolt uses DynamoDB because it fits the data persistence use case far better than RDS. Since each interaction Jolt has with the database uses an entire deployment object, normalizing the data into a relational style wouldn’t provide any benefits for Jolt’s use case. Additionally, by storing the deployment object as-is in the database, we avoid the need for designing and querying a complex relational schema. </p>
+
+              <p>With DynamoDB, when a user deploys an application, the deployment object is stored as a stringified JSON object and retrieval of the data for specific deployment is easily accomplished by querying for the desired object and deserializing it at runtime.</p>
+
+              <h4>Using DynamoDB to Update</h4>
+
+              <figure>
+                <img src="images/diagrams/Writeup/Successful_Atomic_Deploy.png" alt="Successful atomic deployment">
+                <figcaption>
+                  Once each piece of infrastructure has successfully been updated, a new deployment object is written to DynamoDB.
+                  </figcaption>
+              </figure>
+
+
+              <p>In order to update, Jolt queries the DynamoDB table for the previous deployment object, and uses this record of the existing infrastructure in order to reuse components wherever possible, and create new versions as needed. Once the update is complete, a new deployment object is written to DynamoDB that contains the infrastructure and versions associated with the updated application.</p>
+
+              <h4>Updating CloudFront</h4>
+
+              <p>
+                <ol class="indented">
+                  <li>
+                    <h4>Invalidate the Cache</h4>
+                    <p>By default, CloudFront caches content for a 24 hour period. This means that even after a new version of the application’s static assets has been sent to S3, CloudFront will continue to serve the stale cached content to clients until the 24 hours have ended.</p>
+                    <p>To invalidate the cached content right away, Jolt sends a request to CloudFront that will clear out the currently cached version of the application. Now, as soon as the cache invalidation has propagated to a CDN server, the next request that server receives will fall through to the origin on S3 and the new version of the application will start being served to clients.</p>
+                  </li>
+                  <li>
+                    <h4>Update Lambda@Edge</h4>
+                    <p>Since Lambda@Edge is versioned just like regular Lambdas, Jolt creates a new version of it that redirects relative path requests with the <string class="code-snippet">./functions</string>prefix so that they reach the new version of each Lambda on API Gateway. Once the new Lambda@Edge version has been deployed, Jolt updates the CloudFront distribution so that it uses the new Lambda@Edge version to intercept relative path requests.</p>
+                  </li>
+                </ol>
+              </p>
+            </div>
+
+            <div id="rollbacks">
+              <h3>7.4 Implementing Rollbacks</h3>
+
+              <p>Another feature of Jolt is the ability to roll the application backwards or forwards to an earlier or later version.</p>
+
+              <p>Jolt performs a rollback in two phases:</p>
+
+              <ul>
+                <li>Reverting the static assets to the specified version</li>
+                <li>Reverting the API to the specified version.</li>
+              </ul>
+
+              <h4>Reverting the Static Assets to the Specified Version</h4>
+              <p>There are two ways of changing the current version of files on AWS S3 to an earlier version:</p>
+              <ol class="indented">
+                <li>
+                  <p>Delete all of the newest versions of each file until the desired version is the most recent.</p>
+                  <ol class="lettered-list indented">
+                    <li>This means that all of the deleted versions of files are lost, preventing users from rolling the application forward to a later version in the future.</li>
+                  </ol>
+                <li>
+                  <p>Download the desired version of each file from S3 and then immediately reupload it so it becomes the latest version.</p>
+                  <ol class="lettered-list indented">
+                    <li>In this case, more space is used but all versions of the static files remain accessible.</li>
+                  </ol>
+                </li>
+              </ol>
+
+              <p>We decided that the flexibility of being able to change an application to any version, both in the past or future, outweighed the cost of the extra storage associated with retaining all previous versions of each file. With Jolt, static assets are reuploaded to S3 when a rollback is performed so that they become the latest version.</p>
+              <p>In addition to reuploading files to S3, a rollback of static assets requires that the CloudFront cache be invalidated, just like during the update process. This way, the next time a request is made to CloudFront it will retrieve and cache the rollback version of each file from S3.</p>
+
+              <h4>Reverting the API to the Specified Version</h4>
+
+              <p>Reverting the API to a different version is challenging because: </p>
+
+              <ul>
+                <li>Every Lambda that was accessible to version of the application’s static assets that are being rolled back to, needs to be available again and they should provide the same functionality that they did when the version was created.</li>
+                <li>Environment variables and dependencies for each Lambda need to be the same as they were when the version was created.</li>
+              </ul>
+
+              <p>In order to allow the API Gateway to roll back to a particular version, Jolt needed a way of versioning the entire API so that each API version provides access to the appropriate versions of each Lambda needed by that version of the application.</p>
+              <p>To accomplish this, Jolt takes advantage of API Gateway stages. A gateway stage represents a snapshot of the API. In the context of a Jolt application, each stage can be thought of as a different version of the application’s API. Each time the application is deployed or updated, a new stage is created that provides access to the latest versions of each Lambda. Jolt uses the version number as the stage name. For example, version 4 of an application’s API might be accessed at the URL <strong class="code-snippet">https://8z2d5ya0q4.execute-api.us-east-1.amazonaws.com/4</strong><p>
+              <p>Finally, to change which stage an application is using, Lambda@Edge needs to be updated. Since Lambda@Edge is used to redirect clients to the API Gateway, Jolt updates Lambda@Edge so that the redirection sends clients to the gateway stage associated with the application version being rolled back to.</p>
+
             <!-- Swiper -->
-            <div class="swiper-container mySwiper">
+            <div class="swiper-container rollback">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/diagrams/client-server-architecture.png"/></div>
-                <div class="swiper-slide"><img src="images/diagrams/traditional-architecture.png"/></div>
+                <div class="swiper-slide"><img src="images/diagrams/Writeup/Carousel/API Versioning 2.png"/></div>
+                <div class="swiper-slide"><img src="images/diagrams/Writeup/Carousel/API Versioning 3.png"/></div>
+                <div class="swiper-slide"><img src="images/diagrams/Writeup/Carousel/API Versioning Jolt Rollback.png"/></div>
+                <div class="swiper-slide"><img src="images/diagrams/Writeup/Carousel/API Versioning 5.png"/></div>
+                <div class="swiper-slide"><img src="images/diagrams/Writeup/Carousel/API Versioning 6.png"/></div>
               </div>
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
               <div class="swiper-pagination"></div>
             </div>
 
-            <!-- Swiper JS -->
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
             <!-- Initialize Swiper -->
             <script>
-              var swiper = new Swiper(".mySwiper", {
+              var swiper = new Swiper(".rollback", {
                 pagination: {
                   el: ".swiper-pagination",
                   type: "progressbar",
@@ -425,18 +1185,154 @@
 
               });
             </script>
+            <p>By updating Lambda@Edge to redirect clients to different API Gateway stages, Jolt can change the version of the entire API to the version expected by the static assets that were rolled back to. By tracking the gateway stage and static asset versions in the deployment object stored in DynamoDB, Jolt can keep both parts of the application in sync when it performs a rollback.</p>
 
-            <h2 id="future-work">Future Work</h2>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
-            <p>TEXT</p>
+            <h4>The Complete Rollback Process</h4>
+
+            <figure>
+              <div class="swiper-container complete-rollback">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/Rollback 1.png"/></div>
+                  <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/Rollback 2.png"/></div>
+                  <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/Rollback 3.png"/></div>
+                </div>
+              </div>
+
+              <!-- Initialize Swiper -->
+              <script>
+                var swiper = new Swiper(".complete-rollback", {
+                  observer: true,
+                  observeParents: true,
+                  autoplay: {
+                    delay: 2000,
+                  },
+                });
+              </script>
+              <figcaption>The Complete Rollback Process.</figcaption>
+            </figure>
+            </div>
+
+            <div id="function-packaging">
+              <h3>7.5 Packaging Function Dependencies and Environment Variables</h3>
+
+              <p>Another feature Jolt provides is the automatic packaging of dependencies and environment variables for functions.</p>
+              <p>Packaging functions properly is key in providing a functional Jamstack + serverless application. If a developer needs a 3rd party library for use within a particular function or there is a secret key that the developer does not wish to share with outside parties, Jolt needs to ensure that they are included when the Lambda is provisioned on AWS.</p>
+              <p>Implementing this in code is technically difficult because Jolt versions Lambdas. With versioned Lambdas, Jolt can only specify dependencies and environment variables when the Lambda version is created. This is because a versioned Lambda cannot be changed after it has been deployed. For a single function, these limitations mean that Jolt has to:</p>
+
+              <ul>
+                <li>Find all of its dependencies</li>
+                <li>Find its environment variables</li>
+                <li>Ensure that the environment variables are correctly mapped to their respective functions and are not available to other functions for security reasons.</li>
+              </ul>
+
+              <h4>Finding Function Dependencies: Zip It and Ship It</h4>
+
+              <p>Building a method of packaging function dependencies from scratch would have involved parsing the code for each function recursively in order to find each dependency required by that function, each dependency required by those dependencies, and so on. In order to avoid this complexity, Jolt takes advantage of a pre-existing solution to gather function dependencies before deploying them.</p>
+              <p>Zip It And Ship It is a library created by Netlify that can parse a function and create a zip archive of that function and all of its dependencies. While Zip It And Ship It fits Jolt's needs almost perfectly, we made a few modifications to the library. Our modifications allow Lambdas to be created at a relative path that is derived from the relative path of the function within the Jolt functions folder. For example, if a developer has directories nested within their functions folder like <strong class="code-snippet">functions/notes/all.js</strong> or <strong class="code-snippet">functions/todos/all.js</strong> the original Zip It And Ship would provide the function name <strong class="code-snippet">all</strong> to Jolt, which would result in two Lambdas being created at the same endpoint <strong class="code-snippet">/all</strong> on the API Gateway (doing this would cause an error). Our version preserves the relative path of each function so that they can be reached at the endpoints <strong class="code-snippet">/notes/all</strong> and <strong class="code-snippet">/todos/all</strong></p>
+
+              <h4>Retrieving Lambda Environment Variables</h4>
+
+              <p>By default, Zip It and Ship It ignores environment variables while packaging functions so Jolt utilizes a different solution to handle them.</p>
+              <p>Since packaging environment variables for Jolt functions needs to be done before a new function version is published, Jolt looks for a <strong class="code-snippet">.env</strong> file in every subdirectory of the functions folder. A <strong class="code-snippet">.env</strong> file contains a new-line separated list of environment variables. Before Jolt creates a Lambda, it checks to see if there is a <strong class="code-snippet">.env</strong> file within the same directory as the function. If a <strong class="code-snippet">.env</strong> file is found, the environment variables are retrieved and securely sent directly to AWS when the new Lambda version is created.</p>
+              <p>By customizing Zip It and Ship It to fit our needs, and implementing a way to add environment variables to specific Lambdas at runtime, Jolt automates the process of packaging functions with their required dependencies and environment variables when creating Lambdas.</p>
+
+              <h4>7.6 Implementing a Local Development Environment for Testing</h4>
+
+              <p>The final feature we added to Jolt is a local development environment that allows Lambda functions to be tested prior to deployment. When developing web applications that have a traditional back end, a variety of methods exist for running that back end locally during development. This is not the case with serverless functions.</p>
+
+              <p>With no way of running Lambdas locally during development, the only way of testing them or integrating them with the front end of an application is to deploy them to AWS during development. Then, if the Lambdas don’t function as intended, debugging must be performed remotely.</p>
+
+              <p>In order to make the process of testing and debugging Lambdas easier, we followed the lead of other JAMstack focused solutions like Netlify and Vercel and implemented a local Lambda server that allows developers to test and debug their Lambda code during development.</p>
+
+              <p>To ensure that it was reliable and intuitive to use, this local Lambda server provides the following:</p>
+
+              <ol class="indented">
+                <li>Integration with a front end development server.</li>
+                <li>Support for both synchronous and asynchronous Lambda functions.</li>
+                <li>Real time logging of function output and error messages in the terminal to make it easier to diagnose and fix problems with functions.</li>
+                <li>Auto-loading of any environment variables into functions at runtime.
+                  Updates to local function code take effect in real time without needing to restart the server.
+                  </li>
+                <li>Updates to local function code take effect in real time without needing to restart the server.</li>
+                <li>Mirroring the functionality of real Lambdas as closely as possible.</li>
+              </ol>
+
+              <p>The core of this local Lambda server is an Express application. When requests are received by the server, the requested function is loaded, provided with the relevant environment variables and invoked with arguments designed to mimic the arguments given to Lambdas on AWS. By reloading functions with every request, the functions are not stuck as static function objects living in memory. This way, changes made to each function are represented on the server in real time.</p>
+
+              <p>The lambda development environment can be spun up with two commands:</p>
+
+              <ul>
+                <li>
+                  `jolt dev` runs the front end server and Lambda server simultaneously and requests from the front end are proxied to the requested function to allow the full JAMstack + serverless application to be run locally.
+                </li>
+              </ul>
+
+              <figure>
+                <img src="images/diagrams/Writeup/Local_Testing.png" alt="Local Testing">
+                <figcaption>Using <strong class="code-snippet">jolt dev</strong> during development to integrate the front end with serverless functions.</figcaption>
+              </figure>
+
+              <ul>
+                <li><strong class="code-snippet">jolt functions</strong> runs the Lambda server by itself. This could be beneficial for a variety of use cases including unit testing or API testing with a tool like Postman.</li>
+              </ul>
+            </div>
+
+
+            <div id="final-architecture">
+              <h2>8. Final Architecture</h2>
+
+              <p>With the additional features discussed above, the final architecture of Jolt looks like this:</p>
+
+              <figure><img src="images/diagrams/Writeup/Jolt_Core.png" alt="Jolt Final Architecture"></figure>
+
+              <p>From the  perspective of a client:</p>
+
+              <ol class="indented">
+                <li>Requests can be sent to CloudFront, and CloudFront returns cached static assets. If the cache is empty or has expired, CloudFront will retrieve the static assets from S3.</li>
+                <li>Requests for serverless functions are intercepted by Lambda@Edge.
+                  Lambda@Edge responds with a 308 Permanent Redirect that tells the client to send the request to the API Gateway.
+                  </li>
+                <li>Lambda@Edge responds with a 308 Permanent Redirect that tells the client to send the request to the API Gateway.</li>
+                <li>The client issues a new request to the API Gateway.</li>
+                <li>This triggers the appropriate Lambda to be invoked and a response is sent back to the client.</li>
+              </ol>
+
+              <p>From the perspective of a developer:</p>
+              <ol class="indented">
+                <li>All components of a JAMstack + serverless application are provisioned automatically.</li>
+                <li>Each deployment of the application is stored in a DynamoDB table.</li>
+                <li>The DynamoDB table is used for updates, rollbacks, and teardowns.</li>
+                <li>When a developer decides to make changes to an existing application, they can easily access any current or previously deployed version of the application.</li>
+              </ol>
+
+              <p>Jolt can also be used to deploy and manage multiple applications and each application will have its own isolated infrastructure set.</p>
+            </div>
+
+            <div id="future-work">
+              <h2>9. Future Work</h2>
+              <p>Some future work we have in mind includes:</p>
+              <ul>
+                <li>Github integration using Github Actions that would allow for continuous deployment.</li>
+                <li>Adding dynamic routing for functions</li>
+                <li>Route53 integration to automate adding custom domain names</li>
+                <li>Additional Lambda Runtimes such as Ruby and Go</li>
+              </ul>
+            </div>
+
+            <div id="references">
+              <h2>References</h2>
+              <ol class="indented">
+                <li id="reference-1"><a href="https://stackify.com/web-application-architecture/">https://stackify.com/web-application-architecture/</a></li>
+                <li id="reference-2"><a href="https://jamstack.org/what-is-jamstack/">https://jamstack.org/what-is-jamstack/</a></li>
+                <li id="reference-3"><a href="https://vimeo.com/340526374">https://vimeo.com/340526374</a></li>
+                <li id="reference-4"><a href="https://jamstack.org/why-jamstack/">https://jamstack.org/why-jamstack/</a></li>
+                <li id="reference-5"><a href="https://www.smashingmagazine.com/2016/08/using-a-static-site-generator-at-scale-lessons-learned/">https://www.smashingmagazine.com/2016/08/using-a-static-site-generator-at-scale-lessons-learned/</a></li>
+                <li id="reference-6"><a href="https://aws.amazon.com/lambda/">https://aws.amazon.com/lambda/</a></li>
+                <li id="reference-7"><a href="https://www.stackery.io/blog/jamstack-meets-serverless/">https://www.stackery.io/blog/jamstack-meets-serverless/</a></li>
+                <li id="reference-8"><a href="https://www.youtube.com/watch?v=Z1uVLa2lmZY">https://www.youtube.com/watch?v=Z1uVLa2lmZY</a></li>
+                <li id="reference-9"><a href="https://fauna.com/blog/comparison-faas-providers">https://fauna.com/blog/comparison-faas-providers</a></li>
+              </ol>
+          </div>
         </div>
       </div>
     </div>
