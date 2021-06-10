@@ -387,7 +387,7 @@
               <h3>0.1 Jolt Quickstart Guide</h3>
               <p>To get started with Jolt, run: <strong class="code-snippet">npm install -g jolt-framework</strong></p>
 
-              <p>Note: Jolt assumes that the user has <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html">configured their AWS credentials</a> locally through the AWS CLI with the command `aws configure`.</p>
+              <p>Note: Jolt assumes that the user has <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html">configured their AWS credentials</a> locally through the AWS CLI with the command <em class="code-snippet">aws configure</em>.</p>
 
               <p>Here is a list of Jolt commands: (All commands should be run from the root of the application)</p>
               <table>
@@ -398,35 +398,35 @@
                     </tr>
                 </thead>
                 <tr>
-                  <td>jolt init</td>
+                  <td><em class="code-snippet">jolt init</em></td>
                   <td>Initialize an application for use with Jolt: Prompts the user to answer a series of questions about the application. Answers are stored in a local configuration file that Jolt references while running other commands.</td>
                 </tr>
                 <tr>
-                  <td>jolt dev</td>
+                  <td><em class="code-snippet">jolt dev</em></td>
                   <td>Spins up the user’s front end development server + Lambda development server in order to allow the full application to be run locally.</td>
                 </tr>
                 <tr>
-                  <td>jolt functions</td>
+                  <td><em class="code-snippet">jolt functions</em></td>
                   <td>Spins up the Lambda development server by itself.</td>
                 </tr>
                 <tr>
-                  <td>jolt deploy</td>
+                  <td><em class="code-snippet">jolt deploy</em></td>
                   <td>Deploys the application on AWS.</td>
                 </tr>
                 <tr>
-                  <td>jolt update</td>
+                  <td><em class="code-snippet">jolt update</em></td>
                   <td>Builds and deploys the latest version of a previously deployed application. The underlying infrastructure is reused wherever possible.</td>
                 </tr>
                 <tr>
-                  <td>jolt rollback</td>
+                  <td><em class="code-snippet">jolt rollback</em></td>
                   <td>Prompts the user to select from a list of versions associated with the current application. Once a version is selected, the front end and Lambdas are reverted to that version.</td>
                 </tr>
                 <tr>
-                  <td>jolt destroy</td>
+                  <td><em class="code-snippet">jolt destroy</em></td>
                   <td>Removes an application and all of its associated AWS infrastructure.</td>
                 </tr>
                 <tr>
-                  <td>jolt lambda [function_name]</td>
+                  <td><em class="code-snippet">jolt lambda [function_name]</em></td>
                   <td>Creates a Lambda template in the functions folder with the specified function_name.</td>
                 </tr>
               </table>
@@ -483,7 +483,7 @@
 
               <figure>
                 <img src="images/diagrams/Writeup/Complex_Three_tier_architecture.png" alt="Complex Three-Tier Architecture">
-                <figcaption>Expanding the three-tier architecture with a load balancer and additional web, application, and database servers.</figcaption>
+                <figcaption>Expanding the three-tier architecture with a load balancer, cache, and additional web, application, and database servers.</figcaption>
               </figure>
 
               <p>Implementing more complex architectures allows developers to have more control over their application. However, the additional complexity results in:</p>
@@ -765,7 +765,7 @@
               <h4>DIY Solutions</h4>
 
               <figure>
-                <img src="images/diagrams/Writeup/Comparison_DIY.png" alt="DIY versus JAMStack`">
+                <img src="images/diagrams/Writeup/Comparison_DIY.png" alt="DIY versus JAMStack">
               </figure>
 
               <p>DIY solutions generally fall under the heading of Infrastructure as Code, or IAC. IAC tools like Serverless Framework and AWS SAM allow the developer to describe the needed infrastructure in code. Using these tools, developers can create a repeatable, programmatic method of provisioning and deploying JAMstack + Serverless applications. Since you’re creating the infrastructure on your own AWS account, you have access to the underlying infrastructure if you need to customize things later.</p>
@@ -839,7 +839,7 @@
               </ol>
 
               <h4>The Functions Folder</h4>
-              <p>Functions are defined in a separate functions folder located in the root of the application. The functions folder contains a collection of `.js` files, each of which represents a Lambda. In addition, a `package.json` file is needed in order to include any dependencies required by the functions. Finally, environment variables are defined in a `.env` file that lives alongside the functions.</p>
+              <p>Functions are defined in a separate functions folder located in the root of the application. The functions folder contains a collection of <em class="code-snippet">.js</em> files, each of which represents a Lambda. In addition, a <em class="code-snippet">package.json</em> file is needed in order to include any dependencies required by the functions. Finally, environment variables are defined in a <em class="code-snippet">.env</em> file that lives alongside the functions.</p>
 
               <h4>Creating Functions</h4>
               <p> A basic Lambda function looks like this:</p>
@@ -851,7 +851,7 @@
 
               <h4>Function Templates</h4>
 
-              <p>For users who are unfamiliar with the Lambda syntax, or who want a shortcut for creating a Lambda, entering the command `jolt lambda` and the path they want the lambda to have will automatically create a function inside the user’s functions folder.</p>
+              <p>For users who are unfamiliar with the Lambda syntax, or who want a shortcut for creating a Lambda, entering the command <em class="code-snippet">jolt lambda</em> and the path they want the lambda to have will automatically create a function inside the user’s functions folder.</p>
 
               <figure>
                 <img src="images/diagrams/Writeup/jolt-functions-demo.gif" alt="jolt Functions Demo">
@@ -896,7 +896,7 @@
                       <img src="images/diagrams/Writeup/Carousel/Jolt Deploy 2.png"/>
                       <figcaption>
                         <h4>Creating an API Gateway</h4>
-                        <p>Next, A new API Gateway is created. The gateway is used to proxy client requests to the appropriate Lambda.</p>
+                        <p>Next, a new API Gateway is created. The gateway is used to proxy client requests to the appropriate Lambda.</p>
                       </figcaption>
                     </figure>
                   </div>
@@ -1006,33 +1006,48 @@
                 <li>An additional benefit of using a 308 Permanent Redirect is the fact that the API Gateway location will be cached in the browser. Future requests to the Lambda can then be sent directly to the API Gateway without requiring the initial request-response to Lambda@Edge.</li>
               </ol>
 
-              <figure>
-                            <!-- Swiper -->
-                <div class="swiper-container edgeLambda">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/Lambda@Edge 1.png"/></div>
-                    <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/Lambda@Edge 2.png"/></div>
-                  </div>
-                </div>
+													<!-- Swiper -->
+							<div class="swiper-container edgeLambda">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<figure>
+											<img src="images/diagrams/Writeup/Gifs/Lambda@Edge 1.png"/>
+											<figcaption>A client request is received by Lambda@Edge which responds with a 308 Permanent Redirect</figcaption>
+										</figure>
+									</div>
+									<div class="swiper-slide">
+										<figure>
+											<img src="images/diagrams/Writeup/Gifs/Lambda@Edge 2.png"/>
+											<figcaption>Next, the client follows the redirect to send the same request to the Lambda via API Gateway</figcaption>
+										<figure>
+									</div>
+								</div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-pagination"></div>
+							</div>
 
-                <!-- Initialize Swiper -->
-                <script>
-                  var swiper = new Swiper(".edgeLambda", {
-                    observer: true,
-                    observeParents: true,
-                    autoplay: {
-                      delay: 3000,
-                    },
-                  });
-                </script>
-                <figcaption>How Jolt uses Lambda@Edge to redirect relative path requests to Lambdas via an API Gateway. </figcaption>
-              </figure>
+							<!-- Initialize Swiper -->
+							<script>
+								var swiper = new Swiper(".edgeLambda", {
+									observer: true,
+									observeParents: true,
+									pagination: {
+										el: ".swiper-pagination",
+										type: "progressbar",
+									},
+									navigation: {
+										nextEl: ".swiper-button-next",
+										prevEl: ".swiper-button-prev",
+									},
+								});
+							</script>
             </div>
 
             <div id="atomic-deployments">
               <h3>7.2 Implementing Atomic Deployments of Infrastructure</h3>
 
-              <p>Another feature that jolt provides is atomic deployments. In an atomic deployment, either all resources are deployed or none of the resources are deployed.</p>
+              <p>Another feature that Jolt provides is atomic deployments. In an atomic deployment, either all resources are deployed or none of the resources are deployed.</p>
 
               <figure>
                 <img src="images/diagrams/Writeup/Atomic_Deploys_-_Error_when_deploying.png" alt="">
@@ -1166,11 +1181,40 @@
             <!-- Swiper -->
             <div class="swiper-container rollback">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/diagrams/Writeup/Carousel/API Versioning 2.png"/></div>
-                <div class="swiper-slide"><img src="images/diagrams/Writeup/Carousel/API Versioning 3.png"/></div>
-                <div class="swiper-slide"><img src="images/diagrams/Writeup/Carousel/API Versioning Jolt Rollback.png"/></div>
-                <div class="swiper-slide"><img src="images/diagrams/Writeup/Carousel/API Versioning 5.png"/></div>
-                <div class="swiper-slide"><img src="images/diagrams/Writeup/Carousel/API Versioning 6.png"/></div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="images/diagrams/Writeup/Carousel/API Versioning 2.png"/>
+                    </br>
+                    <figcaption>Before a rollback, client requests are redirected via the Lambda@Edge to stage/version 2 of the API Gateway.</figcaption>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="images/diagrams/Writeup/Carousel/API Versioning 3.png"/>
+                    </br>
+                    <figcaption>The API Gateway proxies requests to a Lambda in stage/version 2 of the API.</figcaption>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="images/diagrams/Writeup/Carousel/API Versioning Jolt Rollback.png"/>
+                    <figcaption>A rollback is performed with the <em class="code-snippet">jolt rollback</em> command.</figcaption>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="images/diagrams/Writeup/Carousel/API Versioning 5.png"/>
+                    </br>
+                    <figcaption>After the rollback is completed the Lambda@Edge redirects client requests to stage/version 1 of the API Gateway.</figcaption>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="images/diagrams/Writeup/Carousel/API Versioning 6.png"/>
+                    </br>
+                    <figcaption>Now the API Gateway proxies requests to a Lambda in stage/version 1 of the API.</figcaption>
+                  </figure>
+                </div>
               </div>
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
@@ -1197,27 +1241,47 @@
 
             <h4>The Complete Rollback Process</h4>
 
-            <figure>
               <div class="swiper-container complete-rollback">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/Rollback 1.png"/></div>
-                  <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/Rollback 2.png"/></div>
-                  <div class="swiper-slide"><img src="images/diagrams/Writeup/Gifs/Rollback 3.png"/></div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Gifs/Rollback 1.png"/>
+                      <figcaption>When a rollback begins, the deployment object for the selected version is retrieved from S3 and the static files recorded in the object are reuploaded to S3 so that they become the current version of the application.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Gifs/Rollback 2.png"/>
+                      <figcaption>Next, Lambda@Edge is updated to a version that will redirect clients to the API Gateway stage associated with the selected version of the application.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/diagrams/Writeup/Gifs/Rollback 3.png"/>
+                      <figcaption>Finally, the CloudFront cache is invalidated so that the reuploaded files can be served to clients immediately. Then CloudFront is configured to use the new Lambda@Edge and the rollback is complete.</figcaption>
+                    </figure>
+                  </div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
               </div>
 
               <!-- Initialize Swiper -->
               <script>
                 var swiper = new Swiper(".complete-rollback", {
+                  pagination: {
+                    el: ".swiper-pagination",
+                    type: "progressbar",
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
                   observer: true,
                   observeParents: true,
-                  autoplay: {
-                    delay: 2000,
-                  },
                 });
               </script>
-              <figcaption>The Complete Rollback Process.</figcaption>
-            </figure>
             </div>
 
             <div id="function-packaging">
@@ -1272,7 +1336,7 @@
 
               <ul>
                 <li>
-                  `jolt dev` runs the front end server and Lambda server simultaneously and requests from the front end are proxied to the requested function to allow the full JAMstack + serverless application to be run locally.
+                  <em class="code-snippet">jolt dev</em> runs the front end server and Lambda server simultaneously and requests from the front end are proxied to the requested function to allow the full JAMstack + serverless application to be run locally.
                 </li>
               </ul>
 
@@ -1331,7 +1395,7 @@
             <div id="references">
               <h2>References</h2>
               <ol class="indented">
-                <li id="reference-1"><a href="https://stackify.com/web-application-architecture/">https://stackify.com/web-application-architecture/</a></li>
+                <li id="reference-1"><a href="https://stackify.com/web-application-architecture/" style=>https://stackify.com/web-application-architecture/</a></li>
                 <li id="reference-2"><a href="https://jamstack.org/what-is-jamstack/">https://jamstack.org/what-is-jamstack/</a></li>
                 <li id="reference-3"><a href="https://vimeo.com/340526374">https://vimeo.com/340526374</a></li>
                 <li id="reference-4"><a href="https://jamstack.org/why-jamstack/">https://jamstack.org/why-jamstack/</a></li>

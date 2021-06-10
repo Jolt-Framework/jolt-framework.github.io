@@ -34,6 +34,7 @@ body {
 
 .code-snippet {
   background-color: rgba(0, 0, 0, 0.05);
+  padding: 0 4px;
 }
 
 *,
@@ -314,7 +315,6 @@ body {
 table, tbody tr td {
   border: var(--jolt-black) solid 1px;
   text-align: center;
-
 }
 
 table td:nth-child(2n-1) {
@@ -630,6 +630,19 @@ sup {
 sub {
   /* Move the subscripted text down, but only half as far down as the superscript moved up */
   bottom: -0.25em;
+}
+
+/* Ensures that in page links to references don't jump to a position where the target anchor is behind the fixed header */
+#references li {
+ padding-top: 60px;
+ margin-top: -60px;
+}
+
+/* Vertically center command column text in table */
+table td:first-child {
+    vertical-align: middle;
+    padding: 5px;
+    position: relative;
 }
 
 /* Indent list */
