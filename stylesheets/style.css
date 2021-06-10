@@ -632,12 +632,6 @@ sub {
   bottom: -0.25em;
 }
 
-/* Ensures that in page links to references don't jump to a position where the target anchor is behind the fixed header */
-#references li {
- padding-top: 60px;
- margin-top: -60px;
-}
-
 figcaption {
   color: #718090
 }
