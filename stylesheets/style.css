@@ -638,6 +638,10 @@ sub {
  margin-top: -60px;
 }
 
+figcaption {
+  color: #718090
+}
+
 /* Vertically center command column text in table */
 table td:first-child {
     vertical-align: middle;
