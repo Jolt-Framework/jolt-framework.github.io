@@ -30,6 +30,7 @@ const handlePageLoad = () => {
   handleMainSectionSelection();
   handleTocVisibility();
   handleTocSelection();
+  cycleJoltFeatures();
 };
 
 const handleProseSize = () => {
@@ -153,6 +154,22 @@ const handlemobileMenuClick = () => {
     header.classList.add("mobile-menu-open");
   }
 };
+
+const cycleJoltFeatures = () => {
+  const features = document.querySelector(".h-full h2").children;
+  let currentIndex = 0;
+  features[currentIndex].style.color = "#071E3D";
+
+  setInterval(() => {
+    features[currentIndex].style.color = "#fff";
+    currentIndex += 1;
+
+    if (currentIndex > 3) currentIndex = 0;
+
+    features[currentIndex].style.color = "#071E3D";
+
+  }, 2000);
+}
 
 // Helpers
 const throttle = (callback, wait) => {
