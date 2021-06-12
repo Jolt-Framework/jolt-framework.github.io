@@ -448,8 +448,6 @@
                 <img src="images/diagrams/Writeup/Traditional_Architecture.png" alt="Traditional Architecture">
                 <figcaption>A web browser (the client) makes an http request to a web server which, in this case, returns static assets such as html and images for the browser to render.</figcaption>
               </figure>
-
-              <p>Most web applications use some form of three-tier architecture on the server side.</p>
             </div>
 
             <div id="three-tier-architecture">
@@ -519,7 +517,7 @@
 
               <p>Contrast this with the three-tier architecture where pages are re-built for every request, and it becomes clear that an approach of pre-rendering content will lead to much faster page load times in the long run.</p>
 
-              <p>After the content has been pre-built, it is cached on globally distributed CDN (Content Delivery Network) servers and. Now when a page is requested, the CDN server nearest to the client can send the requested page with minimal latency. The use of a CDN for serving static content eliminates the need for running a web server.</p>
+              <p>After the content has been pre-built, it is cached on globally distributed CDN (Content Delivery Network) servers. Then, when a page is requested, the CDN server nearest to the client can send the requested page back with minimal latency. The use of a CDN for serving static content can eliminate the need for running a web server.</p>
             </div>
 
             <div id="jamstack-apis">
@@ -613,7 +611,7 @@
 
             <div id="serverless-functions">
               <h3>3.1 Serverless Functions</h3>
-              <p>One popular cloud provider, Amazon Web Services, describes serverless functions as <q>"A compute service that lets you run code without provisioning or managing servers... or managing runtimes."</q><a href="#reference-6"><sup>6</sup></a></p>
+              <p>Amazon Web Services describes serverless functions as <q>"A compute service that lets you run code without provisioning or managing servers... or managing runtimes."</q><a href="#reference-6"><sup>6</sup></a></p>
 
               <p>Serverless functions allow developers to work at a level of abstraction where they only need to select a runtime and write the code needed to achieve the desired functionality. After that, the code is given to a FaaS provider who will handle starting the functions (and stopping them when not in use), scaling them as traffic increases and decreases, and managing all of the underlying infrastructure.</p>
 
@@ -637,7 +635,7 @@
                 <figcaption>As more requests are made, serverless functions easily scale up or down to meet demand.</figcaption>
               </figure>
 
-              <p>There are several technical limitations to be aware of when using serverless functions.</p>
+              <p>There are several technical limitations to be aware of when evaluating whether or not serverless functions are good fit for a given use case.</p>
 
               <ol class="indented">
                 <li>
@@ -653,9 +651,9 @@
 
             <div id="jamstack-plus-serverless">
               <h2>4 The JAMstack + Serverless Architecture</h2>
-              <p>Serverless functions provide a solution for the lack of custom compute inherent in the JAMstack architecture. The combination of JAMstack and serverless is becoming so popular that Ryan Coleman, a VP of Engineering at a multi-million dollar app deployment company, said that, <q>“Serverless + JAMstack is where web app architectures are going<a href="#reference-7"><sup>7</sup></a>.”</q></p>
+              <p>Serverless functions provide a solution for the lack of custom compute inherent in the JAMstack architecture and the combination of JAMstack and serverless is becoming increasingly popular. Ryan Coleman, VP of Engineering at Stackery, a company focused on the design and deployment of serverless web applications said: <q>“Serverless + JAMstack is where web app architectures are going<a href="#reference-7"><sup>7</sup></a>.”</q></p>
 
-              <p>A common use case for JAMstack + serverless is dealing with secret API keys when interacting with a 3rd party API like Stripe<a href="#reference-8"><sup>8</sup></a>.</p>
+              <p>To illustrate when how the JAMstack + serverless combination can be useful, we'll take a look at a common use case: Dealing with secret API keys when interacting with a 3rd party API like Stripe<a href="#reference-8"><sup>8</sup></a>.</p>
 
               <p>When a user visits an e-commerce site that uses Stripe to process payments, the Stripe front-end client can be used to collect details related to billing. However, in order to checkout, the Stripe backend client is used, which requires an API key. Since this is a secret key that can’t be sent directly to the client for security reasons, a secure computing environment is needed to store the key and interface with Stripe’s API.</p>
 
@@ -663,7 +661,7 @@
 
               <figure>
                 <img src="images/diagrams/Writeup/JAMstack_Serverless_architecture_Stripe.png" alt="Stripe using Jamstack plus Serverless architecture">
-                <figcaption>Using serverless functions to interact with the Stripe backend API for a JAMstack application.</figcaption>
+                <figcaption>The Stripe client API is used to collect payment details which are sent to a serverless function that interfaces with Stripe directly using a secret API key.</figcaption>
               </figure>
 
               <p>In a JAMstack + serverless application, the payment information can be sent from the client to a serverless function that holds the Stripe API key. The function can then securely contact Stripe on the client’s behalf, await a response and then send the confirmation back to the client. This approach allows for secure processing of payments without the need to provision and manage complicated back end servers.</p>
@@ -987,7 +985,7 @@
 
               <p>This presents a problem for two reasons:</p>
               <ol class="indented">
-                <li>The cross-origin resource policy prevents requests from being made between different origins (the client and the API Gateway) by default.</li>
+                <li>The same-origin policy prevents requests from being made between different origins (the client and the API Gateway) by default.</li>
                 <li>The developer doesn't know the address of the API Gateway while building the application because the gateway is only created after the application is deployed with Jolt.</li>
               </ol>
 
