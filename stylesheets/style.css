@@ -323,6 +323,14 @@ table td:nth-child(2n-1) {
   color: #000000;
 }
 
+.prose {
+  max-width: 80ch;
+}
+
+.prose-lg tbody td:last-child {
+  padding-right: 10px;
+}
+
 .prose h1,
 .prose h2,
 .prose h3 {
