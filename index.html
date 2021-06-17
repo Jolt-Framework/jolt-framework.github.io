@@ -418,13 +418,13 @@
               <table>
                 <thead>
                     <tr>
-                      <th>Command</th>
+                      <th style="text-align: center;">Command</th>
                       <th style="text-align: center;">Description</th>
                     </tr>
                 </thead>
                 <tr>
                   <td><em class="code-snippet">jolt init</em></td>
-                  <td>Initialize an application for use with Jolt: Prompts the user to answer a series of questions about the application. Answers are stored in a local configuration file that Jolt references while running other commands.</td>
+                  <td>Initialize an application for use with Jolt: Prompts the user to answer a series of questions about the application. Answers are stored in a local configuration file that Jolt references while running other commands. </td>
                 </tr>
                 <tr>
                   <td><em class="code-snippet">jolt dev</em></td>
@@ -1270,7 +1270,7 @@
                   <div class="swiper-slide">
                     <figure>
                       <img src="images/diagrams/Writeup/Gifs/Rollback 1.png"/>
-                      <figcaption>When a rollback begins, the deployment object for the selected version is retrieved from S3 and the static files recorded in the object are reuploaded to S3 so that they become the current version of the application.</figcaption>
+                      <figcaption>When a rollback begins, the deployment object for the selected version is retrieved from DynamoDB and the static files recorded in the object are reuploaded to S3 so that they become the current version of the application.</figcaption>
                     </figure>
                   </div>
                   <div class="swiper-slide">
