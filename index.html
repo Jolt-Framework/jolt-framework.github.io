@@ -1395,9 +1395,7 @@
 
               <ol class="indented">
                 <li>Requests can be sent to CloudFront, and CloudFront returns cached static assets. If the cache is empty or has expired, CloudFront will retrieve the static assets from S3.</li>
-                <li>Requests for serverless functions are intercepted by Lambda@Edge.
-                  Lambda@Edge responds with a 308 Permanent Redirect that tells the client to send the request to the API Gateway.
-                  </li>
+                <li>Requests for serverless functions are intercepted by Lambda@Edge.</li>
                 <li>Lambda@Edge responds with a 308 Permanent Redirect that tells the client to send the request to the API Gateway.</li>
                 <li>The client issues a new request to the API Gateway.</li>
                 <li>This triggers the appropriate Lambda to be invoked and a response is sent back to the client.</li>
